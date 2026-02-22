@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Prints "Programming is like building a multilingual puzzle
+ * main - Prints with proper grammar, but the outcome is a piece of art, /with a new line
  * Description: this is my first c program!
  * Return: 0
  */
