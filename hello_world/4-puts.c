@@ -1,7 +1,10 @@
 #include <stdio.h>
 /**
- * my_firts_main - this program should prints a thing ;>
- * main should return 0
+ * main - Prints "Programming is like building a multilingual puzzle
+ * 
+ *
+ * Description: this is my first c program!
+ * Return: 0
  */
 int main(void)
 {
