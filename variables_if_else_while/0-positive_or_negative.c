@@ -4,7 +4,8 @@
 /**
   *  main - this program should deside whether the random number
   *  is pos or nig or zero.
-  *  Description: prints negative if it - and positive\n if it + and zero if it 0
+  *  Description: prints negative if it - and positive\n if it +
+  *  and zero if it 0
   *  Return: 0
   */
 int main(void)
