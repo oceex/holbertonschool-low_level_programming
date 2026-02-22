@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc $CFILE -co c  tput\n
+gcc $CFILE -co main.o  tput\n
