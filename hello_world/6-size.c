@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main
+ * main - this is the starting main and its output the sizes of types
  * Description: this program should prints the sizes of the this types
  * Return: 0
  */
