@@ -22,11 +22,11 @@ printf("%d\n", m);
 }
 else if(m > 5)
 {
-printf("greater than 5\n",);
+printf("greater than 5\n");
 }
 else
 {
-printf("less than 6 and not 0\n",);
+printf("less than 6 and not 0\n");
 }
 return (0);
 }
