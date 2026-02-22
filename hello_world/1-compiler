@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc $CFILE -co main.o  tput\n
+gcc -c "$CFILE" -o "${CFILE%.c}.o"
