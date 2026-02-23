@@ -13,18 +13,18 @@ int n;
 
 for (i = 0; i <= 9; i++)
 {
-for (j = i; j <= 9; j++)
+for (j = 0; j <= 9; j++)
 {
 for (m = i; m <= 9; m++)
 {
-for (n = m + 1; n <= 9; n++)
+for (n = j + 1; n <= 9; n++)
 {
 putchar(i + 48);
 putchar(j + 48);
 putchar(' ');
 putchar(m + 48);
 putchar(n + 48);
-if (!((n == 9) && (m == i) && (j == i) && (i == 9)))
+if (!((n == 9) && (m == i) && (j == (i - 1)) && (i == 9)))
 {
 putchar(',');
 putchar(' ');
