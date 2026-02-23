@@ -17,8 +17,12 @@ for (j = 0; j <= 9; j++)
 {
 for (m = i; m <= 9; m++)
 {
-for (n = j + 1; n <= 9; n++)
+for (n = 0; n <= 9; n++)
 {
+if ((n == 0) && (m == 0) && (j == 0) && (i == 0))
+{
+continue;
+}
 putchar(i + 48);
 putchar(j + 48);
 putchar(' ');
