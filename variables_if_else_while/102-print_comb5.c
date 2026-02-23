@@ -17,8 +17,6 @@ for (j = 0; j <= 9; j++)
 {
 for (m = i; m <= 9; m++)
 {
-for (n = 0; n <= 9; n++)
-{
 if ( m == i )
 {
 n = j + 1;
@@ -27,6 +25,8 @@ else
 {
 n = 0;
 }
+for (; n <= 9; n++)
+{
 putchar(i + 48);
 putchar(j + 48);
 putchar(' ');
