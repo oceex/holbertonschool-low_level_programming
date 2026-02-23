@@ -20,9 +20,11 @@ putchar(i + 48);
 putchar(j + 48);
 putchar(k + 48);
 if (!((k == 9) && (j == (k - 1)) && (i == (j - 1))))
-}
+{
 putchar(',');
 putchar(' ');
+}
+}
 }
 }
 putchar('\n');
