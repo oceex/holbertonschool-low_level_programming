@@ -9,7 +9,7 @@ int main(void)
 int i;
 int j;
 int m;
-int n;
+int n = 0;
 
 for (i = 0; i <= 9; i++)
 {
@@ -17,11 +17,15 @@ for (j = 0; j <= 9; j++)
 {
 for (m = i; m <= 9; m++)
 {
-for (n = 0; n <= 9; n++)
+for (; n <= 9; n++)
 {
-if ((n == 0) && (m == 0) && (j == 0) && (i == 0))
+if ( m == i )
 {
-continue;
+n = j + 1;
+}
+else
+{
+n = 0;
 }
 putchar(i + 48);
 putchar(j + 48);
