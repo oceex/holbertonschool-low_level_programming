@@ -24,7 +24,7 @@ putchar(j + 48);
 putchar(' ');
 putchar(m + 48);
 putchar(n + 48);
-if (!((n == 9) && (m == i) && (j == (i - 1) && (i == 9)))
+if (!((n == 9) && (m == i) && (j == (i - 1)) && (i == 9)))
 {
 putchar(',');
 putchar(' ');
