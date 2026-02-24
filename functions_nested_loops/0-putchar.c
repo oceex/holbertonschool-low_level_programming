@@ -1,10 +1,10 @@
 # include <stdio.h>
 /**
-  * main - this is the starting main and its output '_putchar'
+  * printing - this method is to print '_putchar'
   * Description: this program should prints '_putchar'
   * Return: 0
   */
-int main(void)
+void printing(void)
 {
 printf("_putchar\n");
 return (0);
