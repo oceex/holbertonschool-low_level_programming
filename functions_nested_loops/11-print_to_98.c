@@ -9,6 +9,8 @@
 void print_to_98(int n)
 {
 int i;
+int m;
+int n;
 
 if (n > 98)
 {
@@ -19,7 +21,11 @@ if (!(i == n))
 _putchar(',');
 _putchar(' ');
 }
-_putchar(i + 48);
+if (i > 9)
+{
+_putchar((i / 10) + '0');
+}
+_putchar((i % 10) + '0');
 }
 }
 else
@@ -31,7 +37,12 @@ if (!(i == n))
 _putchar(',');
 _putchar(' ');
 }
-_putchar(i + 48);
+if (i > 9)
+{
+_putchar((i / 10) + '0');
+}
+_putchar((i % 10) + '0');
+}
 }
 }
 }
