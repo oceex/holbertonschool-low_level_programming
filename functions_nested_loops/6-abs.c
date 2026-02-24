@@ -8,5 +8,5 @@
   */
 int _abs(int x)
 {
-return math.abs(x);
+return abs(x);
 }
