@@ -48,6 +48,10 @@ if (!(i == n))
 _putchar(',');
 _putchar(' ');
 }
+if (i < 0)
+{
+_putchar('-');
+}
 if (k > 99)
 {
 _putchar((k / 100) + '0');
