@@ -14,7 +14,6 @@ int k;
 
 if (n > 98)
 {
-
 for (i = n; i >= 98; i--)
 {
 k = abs(i);
@@ -39,6 +38,7 @@ _putchar((k % 10) + '0');
 else
 {
 for (i = n; i <= 98; i++)
+{
 k = abs(i);
 if (!(i == n))
 {
@@ -56,7 +56,6 @@ _putchar((k / 10) + '0');
 }
 _putchar((k % 10) + '0');
 }
-{
 }
 _putchar('\n');
 }
