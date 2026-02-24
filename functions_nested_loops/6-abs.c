@@ -1,5 +1,5 @@
 # include "main.h"
-# include <math.h>
+# include <stdlib.h>
 /**
   *  - This function find the return the abslote value
   *  @x
@@ -8,5 +8,5 @@
   */
 int _abs(int x)
 {
-return (int)abs(x);
+return abs(x);
 }
