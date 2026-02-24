@@ -4,7 +4,7 @@
   * Description: this program should prints '_putchar'
   * Return: 0
   */
-void printing(void)
+int printing(void)
 {
 printf("_putchar\n");
 return (0);
