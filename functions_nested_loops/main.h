@@ -4,8 +4,3 @@ int _putchar(char c);
   * Description: this program should prints all the alphabet on lowercase
   * Return: 0
   */
-int main(void)
-{
-printing();
-return (0);
-}
