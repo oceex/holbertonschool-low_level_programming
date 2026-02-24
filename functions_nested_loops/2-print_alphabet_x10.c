@@ -1,7 +1,7 @@
 # include "main.h"
 /**
-  * main - this is the starting main and its output the alphabet
-  * Description: this program should prints all the alphabet on lowercase
+  * main - this is the starting main and its output the alphabetX10
+  * Description: this program should prints all the alphabet on lowercasex10
   * Return: 0
   */
 void print_alphabet_x10(void)
