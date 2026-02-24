@@ -27,10 +27,6 @@ if (!(j == 9))
 {
 _putchar(',');
 _putchar(' ');
-if ((i * j) <= 9)
-{
-_putchar(' ');
-}
 }
 }
 _putchar('\n');
