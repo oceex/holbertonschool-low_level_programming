@@ -38,8 +38,14 @@ if (k > 9)
 _putchar((k / 10) + '0');
 }
 _putchar((k % 10) + '0');
-
-i = i > 98 ? i--:i++;
+if (i > 98)
+{
+i--;
+}
+else
+{
+i++;
+}
 }
 _putchar('9');
 _putchar('8');
