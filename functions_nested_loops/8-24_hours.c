@@ -1,9 +1,8 @@
 # include "main.h"
 /**
-  *  - This function determines whether
-  *
-  * Description: this program should prints
-  * Return: 0
+  * jack_bauer - This function prints the hours and min
+  * Description: this program should prints houresss
+  * Return: void
   */
 void jack_bauer(void)
 {
@@ -29,11 +28,11 @@ for (m = 0; m <= 5; m++)
 {
 for (n = 0; n <= 9; n++)
 {
-_putchar(i+48);
-_putchar(j+48);
+_putchar(i + 48);
+_putchar(j + 48);
 _putchar(':');
-_putchar(m+48);
-_putchar(n+48);
+_putchar(m + 48);
+_putchar(n + 48);
 _putchar('\n');
 }
 }
