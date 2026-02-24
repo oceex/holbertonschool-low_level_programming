@@ -15,11 +15,6 @@ int k;
 while (i != 98)
 {
 k = abs(i);
-if (!(i == n))
-{
-_putchar(',');
-_putchar(' ');
-}
 if (i < 0)
 {
 _putchar('-');
@@ -46,6 +41,8 @@ else
 {
 i++;
 }
+_putchar(',');
+_putchar(' ');
 }
 _putchar('9');
 _putchar('8');
