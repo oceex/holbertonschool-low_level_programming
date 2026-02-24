@@ -1,16 +1,9 @@
 # include "main.h"
-void print_alphabet(void);
 /**
-  * print_alphabet - 
+  * print_alphabet - printing alpha
   * Description: this program should prints all the alphabet on lowercase
   * Return: 0
   */
-int main(void)
-{
-    print_alphabet();
-    return (0);
-}
-
 void print_alphabet(void)
 {
 int i;
