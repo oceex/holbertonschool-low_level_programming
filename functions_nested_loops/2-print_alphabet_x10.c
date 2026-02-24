@@ -1,6 +1,6 @@
 # include "main.h"
 /**
-  * main - this is the starting main and its output the alphabetX10
+  * print_alphabet_x10 - this output the alphabetX10
   * Description: this program should prints all the alphabet on lowercasex10
   * Return: 0
   */
