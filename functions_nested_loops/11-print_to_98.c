@@ -1,4 +1,5 @@
 # include "main.h"
+#include <stdlib.h>
 /**
   * print_to_98  - This function determines whether
   * @n : the starting number
@@ -9,40 +10,53 @@
 void print_to_98(int n)
 {
 int i;
+int k;
 
 if (n > 98)
 {
 
 for (i = n; i >= 98; i--)
 {
+k = abs(i);
 if (!(i == n))
 {
 _putchar(',');
 _putchar(' ');
 }
-if (i > 9)
+if (k > 99)
 {
-_putchar((i / 10) + '0');
+_putchar((i / 100) + '0');
+k /= 10;
 }
-_putchar((i % 10) + '0');
+if (k > 9)
+{
+_putchar((k / 10) + '0');
+}
+_putchar((k % 10) + '0');
 }
 
 }
 else
 {
 for (i = n; i <= 98; i++)
-{
+k = abs(i);
 if (!(i == n))
 {
 _putchar(',');
 _putchar(' ');
 }
-if (i > 9)
+if (k > 99)
 {
-_putchar((i / 10) + '0');
+_putchar((i / 100) + '0');
+k /= 10;
 }
-_putchar((i % 10) + '0');
+if (k > 9)
+{
+_putchar((k / 10) + '0');
 }
+_putchar((k % 10) + '0');
+}
+{
 }
 _putchar('\n');
 }
