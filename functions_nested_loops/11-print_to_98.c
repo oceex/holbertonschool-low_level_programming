@@ -22,15 +22,14 @@ if (!(i == n))
 _putchar(',');
 _putchar(' ');
 }
-if (!(i == n))
-{
-_putchar(',');
-_putchar(' ');
-}
 if (k > 99)
 {
-_putchar((i / 100) + '0');
-k /= 10;
+_putchar((k / 100) + '0');
+k -= 100;
+if(k <= 9)
+{
+_putchar('0');
+}
 }
 if (k > 9)
 {
@@ -38,8 +37,6 @@ _putchar((k / 10) + '0');
 }
 _putchar((k % 10) + '0');
 }
-}
-
 }
 else
 {
