@@ -1,4 +1,5 @@
 # include "main.h"
+#include <stdlib.h>
 /**
   * print_last_digit - This function determines whether
   * @x : the number
@@ -8,7 +9,7 @@
   */
 int print_last_digit(int x)
 {
-int k = x%10;
+int k = abs(x%10);
 _putchar(k+48);
 return (k);
 }
