@@ -24,8 +24,8 @@ if (!(j == 0))
 {
 _putchar(',');
 _putchar(' ');
-k <= 99?  _putchar(' ') : o++ ;
-k <= 9?  _putchar(' ') : o++;
+k <= 99 ? _putchar(' ') : o++;
+k <= 9 ? _putchar(' ') : o++;
 }
 if (k > 99)
 {
