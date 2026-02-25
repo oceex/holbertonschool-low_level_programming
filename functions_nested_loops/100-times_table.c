@@ -1,9 +1,10 @@
 # include "main.h"
 /**
-  *  - This function determines whether
+  * print_times_table - This function determines whether
+  * @n : the length of the table
   *
   * Description: this program should prints
-  * Return: 0
+  * Return: void
   */
 void print_times_table(int n)
 {
@@ -13,40 +14,34 @@ int k;
 
 if ((n <= 15) && (n >= 0))
 {
-for (i = 0; i <= n; i++)
-{
-for (j = 0; j <= n; j++)
-{
-k = i * j;
-if (!(j == 0))
-{
-_putchar(',');
-_putchar(' ');
-if (k <= 9)
-{
-_putchar(' ');
-}
-if (k <= 99)
-{
-_putchar(' ');
-}
-}
-if (k > 99)
-{
-_putchar((k / 100) + '0');
-k -= 100;
-if (k <= 9)
-{
-_putchar('0');
-}
-}
-if (k > 9)
-{
-_putchar((k / 10) + '0');
-}
-_putchar((k % 10) + '0');
-}
-_putchar('\n');
-}
-}
+   for (i = 0; i <= n; i++)
+   {
+       for (j = 0; j <= n; j++)
+       {
+           k = i * j;
+           if (!(j == 0))
+           {
+              _putchar(',');
+              _putchar(' ');
+              k <= 99?  _putchar(' '): ;
+              k <= 9?  _putchar(' '): ;
+	   }
+           if (k > 99)
+           {
+             _putchar((k / 100) + '0');
+             k -= 100;
+             if (k <= 9)
+             {
+                _putchar('0');
+             }
+          }
+          if (k > 9)
+          {
+              _putchar((k / 10) + '0');
+          }
+          _putchar((k % 10) + '0');
+       }
+       _putchar('\n');
+    }
+ }
 }
