@@ -3,9 +3,9 @@
   * main - This function sum all the numbers that containts 5 or 3
   *
   * Description: this program should prints the sum of all numbers that containts 3 or 5 bellow 1024
-  * Return: void
+  * Return: 0
   */
-void main(void)
+int main(void)
 {
 int i;
 int k = 0;
@@ -22,4 +22,5 @@ k += i;
 }
 }
 printf("%d\n",k);
+return (0);
 }
