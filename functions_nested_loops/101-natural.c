@@ -1,5 +1,4 @@
 # include "main.h"
-# include <stdio.h>
 /**
   * sumMulti_5_3  - This function sum all the numbers that containts 5 or 3
   *
@@ -22,5 +21,9 @@ else if (i % 3 == 0)
 k += i;
 }
 }
-printf("%d\n",k);
+for (;k > 0; k /= 10)
+{
+_putchar((k % 10) + '0');
+}
+_putchar('\n');
 }
