@@ -23,11 +23,11 @@ if (!(j == 0))
 _putchar(',');
 _putchar(' ');
 }
-if (k > 9)
+if (k < 9)
 {
 _putchar(' ');
 }
-if (k > 99)
+if (k < 99)
 {
 _putchar(' ');
 }
