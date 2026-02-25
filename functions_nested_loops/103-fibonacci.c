@@ -10,7 +10,7 @@ int main(void)
 long  m = 1;
 long  n = 2;
 long  tmp = 0;
-long long sum = 0;
+long sum = 0;
 while (m <= 4000000)
 {
 if (m % 2 == 0)
@@ -21,6 +21,6 @@ tmp = m + n;
 m = n;
 n = tmp;
 }
-printf("%lld\n", sum);
+printf("%ld\n", sum);
 return (0);
 }
