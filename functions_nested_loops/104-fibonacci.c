@@ -7,9 +7,9 @@
 int main(void)
 {
 int i;
-long m = 1;
-long n = 2;
-long tmp;
+unsigned long m = 1;
+unsigned long n = 2;
+unsigned long tmp;
 
 for (i = 0; i < 98; i++)
 {
