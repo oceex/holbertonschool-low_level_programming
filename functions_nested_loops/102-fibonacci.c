@@ -7,13 +7,13 @@
 int main(void)
 {
 int i;
-int m = 1;
-int n = 2;
-int tmp = 0;
+long m = 1;
+long n = 2;
+long tmp = 0;
 
 for (i = 0; i < 50; i++)
 {
-printf("%d, ", m);
+printf("%ld, ", m);
 tmp = n + m;
 m = n;
 n = tmp;
