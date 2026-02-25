@@ -9,11 +9,11 @@ int main(void)
 int i;
 int m = 1;
 int n = 2;
-int tmp;
+int tmp = 0;
 
 for (i = 0; i < 50; i++)
 {
-printf("%d, ",m);
+printf("%d, ", m);
 tmp = n + m;
 m = n;
 n = tmp;
