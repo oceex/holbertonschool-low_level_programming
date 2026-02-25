@@ -11,7 +11,7 @@ int i;
 int j;
 int k;
 
-if ((n <= 15) && (n > 0))
+if ((n <= 15) && (n >= 0))
 {
 for (i = 0; i <= n; i++)
 {
@@ -22,7 +22,6 @@ if (!(j == 0))
 {
 _putchar(',');
 _putchar(' ');
-}
 if (k <= 9)
 {
 _putchar(' ');
@@ -30,6 +29,7 @@ _putchar(' ');
 if (k <= 99)
 {
 _putchar(' ');
+}
 }
 if (k > 99)
 {
