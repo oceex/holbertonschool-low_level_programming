@@ -20,9 +20,5 @@ else if (i % 3 == 0)
 k += i;
 }
 }
-for (;k > 0; k /= 10)
-{
-_putchar((k % 10) + '0');
-}
-_putchar('\n');
+printf("%d\n",k);
 }
