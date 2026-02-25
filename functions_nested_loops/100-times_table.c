@@ -11,6 +11,7 @@ void print_times_table(int n)
 int i;
 int j;
 int k;
+int o = 0;
 
 if ((n <= 15) && (n >= 0))
 {
@@ -23,8 +24,8 @@ if ((n <= 15) && (n >= 0))
            {
               _putchar(',');
               _putchar(' ');
-              k <= 99?  _putchar(' '): ;
-              k <= 9?  _putchar(' '): ;
+              k <= 99?  _putchar(' ') : o++ ;
+              k <= 9?  _putchar(' ') : o++ ;
 	   }
            if (k > 99)
            {
