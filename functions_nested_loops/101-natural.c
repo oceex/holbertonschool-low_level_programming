@@ -2,7 +2,8 @@
 /**
   * main - This function sum all the numbers that containts 5 or 3
   *
-  * Description: this program should prints the sum of all numbers that containts 3 or 5 bellow 1024
+  * Description: this program should prints the sum
+  * of all numbers that containts 3 or 5 bellow 1024
   * Return: 0
   */
 int main(void)
@@ -21,6 +22,6 @@ else if (i % 3 == 0)
 k += i;
 }
 }
-printf("%d\n",k);
+printf("%d\n", k);
 return (0);
 }
