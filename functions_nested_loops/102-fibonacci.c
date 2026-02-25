@@ -13,7 +13,14 @@ long tmp = 0;
 
 for (i = 0; i < 50; i++)
 {
+if (i != 49)
+{
 printf("%ld, ", m);
+}
+else
+{
+printf("%ld\n", m);
+}
 tmp = n + m;
 m = n;
 n = tmp;
