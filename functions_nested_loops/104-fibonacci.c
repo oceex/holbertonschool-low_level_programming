@@ -1,18 +1,6 @@
 # include <stdio.h>
 /**
-  * main - This function prints the 98th fibonacci numbreesss
-  * @a : frist term
-  * @b : secound term
-  * @naxt : boolean value to hold the big digit
-  * @a_head : boolean value to hold the big digit
-  * @a_tail : tmp to move the terms
-  * @b_head : anouther tmp
-  * @b_tail  : to conun the terms
-  * @next_head  : to conun the terms
-  * @next_tail : to conun the terms
-  * @base : the 1 trilun
-  * @i : contintg
-  *
+  * main - This function prints the 98th fibonacci numberr
   * Description: this program should prints fibonacciii
   * Return: 0
   */
