@@ -22,7 +22,7 @@ int i;
 for (i = 1; i <= 98; i++)
 {
 if (b1)
-printf("%lu%010lu", b1, a1);
+printf("%lu%09lu", b1, a1);
 else
 printf("%lu", a1);
 
