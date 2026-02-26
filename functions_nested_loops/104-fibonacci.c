@@ -1,43 +1,62 @@
 # include <stdio.h>
 /**
   * main - This function prints the 98th fibonacci numbreesss
-  * @a1 : frist term
-  * @a2 : secound term
-  * @b1 : boolean value to hold the big digit
-  * @b2 : boolean value to hold the big digit
-  * @t1 : tmp to move the terms
-  * @t2 : anouther tmp
-  * @i  : to conun the terms
+  * @a : frist term
+  * @b : secound term
+  * @naxt : boolean value to hold the big digit
+  * @a_head : boolean value to hold the big digit
+  * @a_tail : tmp to move the terms
+  * @b_head : anouther tmp
+  * @b_tail  : to conun the terms
+  * @next_head  : to conun the terms
+  * @next_tail : to conun the terms
+  * @base : to conun the terms
+  * @i : contintg
   *
   * Description: this program should prints fibonacciii
   * Return: 0
   */
 int main(void)
 {
-unsigned long a1 = 1, a2 = 2;
-unsigned long b1 = 0, b2 = 0;
-unsigned long t1, t2;
-int i;
+    int i;
+    unsigned long a = 1, b = 2, next;
+    unsigned long a_head, a_tail, b_head, b_tail;
+    unsigned long next_head, next_tail;
+    unsigned long base = 1000000000;
 
-for (i = 1; i <= 98; i++)
-{
-if (b1)
-printf("%lu%09lu", b1, a1);
-else
-printf("%lu", a1);
+    printf("%lu, %lu", a, b);
 
-if (i != 98)
-printf(", ");
+    for (i = 3; i <= 92; i++)
+    {
+        next = a + b;
+        printf(", %lu", next);
+        a = b;
+        b = next;
+    }
+    a_head = a / base;
+    a_tail = a % base;
+    b_head = b / base;
+    b_tail = b % base;
 
-t1 = a1 + a2;
-t2 = b1 + b2 + (t1 < a1);
+    for (; i <= 98; i++)
+    {
+        next_head = a_head + b_head;
+        next_tail = a_tail + b_tail;
 
-a1 = a2;
-a2 = t1;
-b1 = b2;
-b2 = t2;
-}
+        if (next_tail >= base)
+        {
+            next_tail -= base;
+            next_head++;
+        }
 
-printf("\n");
-return (0);
+        printf(", %lu%09lu", next_head, next_tail);
+
+        a_head = b_head;
+        a_tail = b_tail;
+        b_head = next_head;
+        b_tail = next_tail;
+    }
+
+    printf("\n");
+    return (0);
 }
