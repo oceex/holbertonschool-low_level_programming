@@ -49,7 +49,7 @@ a_head = b_head;
 a_tail = b_tail;
 b_head = next_head;
 b_tail = next_tail;
- }
+}
 printf("\n");
 return (0);
 }
