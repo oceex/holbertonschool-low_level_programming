@@ -24,5 +24,5 @@ _putchar(' ');
 }
 _putchar('\n');
 }
-size <= 0 ? :_putchar('\n') : i++;
+size <= 0 ? _putchar('\n') : i++;
 }
