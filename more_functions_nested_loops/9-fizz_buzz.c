@@ -1,6 +1,7 @@
 # include <stdio.h>
 /**
- * main - Prints Pizz for the multi of 3 and a Buss for a multi of 5 or the number it self.
+ * main - Prints Pizz for the multi of 3 and a Buss for
+ *        a multi of 5 or the number it self.
  * Description: print from 1 to 100
  *
  * Return: void
