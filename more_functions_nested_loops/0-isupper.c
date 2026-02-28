@@ -1,4 +1,4 @@
-# include <stdio.h> 
+# include <stdio.h>
 # include "main.h"
 /**
   * _isupper - this method will return 1 if c is upper or 0 otherways
