@@ -17,7 +17,7 @@ for (i = 0; i < size; i++)
 {
 for(j = 0; j < size; j++)
 {
-if (size - i + 1 <= j)
+if ((size - 1) - i <= j)
 _putchar('#');
 else
 _putchar(' ');
