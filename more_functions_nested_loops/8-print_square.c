@@ -20,4 +20,5 @@ _putchar('#');
 }
 _putchar('\n');
 }
+n <= 0 ? _putchar('\n') : i++;
 }
