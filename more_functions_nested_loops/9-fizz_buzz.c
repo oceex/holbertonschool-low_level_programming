@@ -8,6 +8,7 @@
 int main(void)
 {
 int i;
+
 printf("1");
 for (i = 2; i <= 100; i++)
 {
@@ -21,5 +22,6 @@ i % 3 == 0 ? printf("Buzz") : printf(" Buzz");
 else
 printf(" %d", i);
 }
+printf("\n");
 return (0);
 }
