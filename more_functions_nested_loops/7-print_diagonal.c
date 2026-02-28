@@ -2,6 +2,7 @@
 /**
   * print_diagonal - this method will print a digonal line with \
   * @n : n will be the times of \
+  *
   * Description: this will print \ as a digonal line with n times
   * Return: void
   */
@@ -13,7 +14,7 @@ for (i = 0; i < n ; i++)
 {
 for (j = 0; j < n ; j++)
 {
-if ( j == i)
+if (j == i)
 {
 _putchar('\\');
 break;
@@ -23,5 +24,5 @@ _putchar(' ');
 }
 _putchar('\n');
 }
- n <= 0 ? _putchar('\n') : i++;
+n <= 0 ? _putchar('\n') : i++;
 }
