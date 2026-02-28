@@ -1,7 +1,7 @@
 # include "main.h"
 /**
   * print_diagonal - this method will print a digonal line with \
-  * @n : n will be the times of \
+  * @n : an int number will be the times of \
   *
   * Description: this will print \ as a digonal line with n times
   * Return: void
