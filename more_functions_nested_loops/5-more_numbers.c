@@ -14,7 +14,7 @@ for (j = 0; j <= 9; j++)
 {
 for (i = 0; i <= 14; i++)
 {
-x = i > 9 ? i - 10 : i ;
+x = i > 9 ? i - 10 : i;
 if (i >= 10)
 _putchar('1');
 _putchar(x + 48);
