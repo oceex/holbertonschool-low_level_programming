@@ -1,7 +1,7 @@
 # include <stdio.h>
 # include "main.h"
 /**
-  * _isdigit - this method will return a * b
+  * mul - this method will return a * b
   * @a : first int
   * @b : second int
   *
