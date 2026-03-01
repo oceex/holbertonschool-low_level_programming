@@ -16,6 +16,7 @@ int l = 1;
 if (n < 0)
 {
 _putchar('-');
+b = -b;
 n = -n;
 }
 if (n == 0)
