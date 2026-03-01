@@ -21,7 +21,10 @@ b = -n;
 a = -n;
 }
 else
+{
+a = n;
 b = n;
+}
 while (b > 0)
 {
 b /= 10;
