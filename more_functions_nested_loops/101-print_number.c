@@ -36,7 +36,7 @@ k--;
 }
 while (a > 0)
 {
-b = n / l;
+b = a / l;
 _putchar(b + '0');
 k++;
 a -= b * l;
