@@ -14,10 +14,20 @@ int main(void)
 {
 unsigned long n = 612852475143;
 unsigned long i;
+unsigned long j;
+int k;
 
 for (i = n - 1; i > 0; i--)
 {
-if (n % i == 0)
+k = 0;
+if (n % i ==0)
+{
+for (j = i; j > 0; j--)
+{
+if (j % i == 0)
+k++;
+}
+if (k <= 2)
 {
 printf("%lu\n", i);
 break;
