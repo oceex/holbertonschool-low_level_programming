@@ -10,6 +10,7 @@
 void print_number(int n)
 {
 unsigned int b;
+unsigned int a;
 int k = 0;
 unsigned int l = 1;
 int x = 0;
@@ -17,7 +18,7 @@ if (n < 0)
 {
 _putchar('-');
 b = -n;
-n = -n;
+a = -n;
 }
 else
 b = n;
@@ -33,12 +34,12 @@ while (k > 0)
 l *= 10;
 k--;
 }
-while (n > 0)
+while (a > 0)
 {
 b = n / l;
 _putchar(b + '0');
 k++;
-n -= b * l;
+a -= b * l;
 l /= 10;
 }
 while (k < x)
