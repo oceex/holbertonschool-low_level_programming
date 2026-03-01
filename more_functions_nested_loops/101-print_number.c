@@ -11,6 +11,8 @@ void print_number(int n)
 {
 int b = n;
 int k = 0;
+int l = 1;
+
 if (n < 0)
 {
 _putchar('-');
@@ -24,11 +26,16 @@ b /= 10;
 k++;
 }
 k--;
-b = 0;
+while (k > 0)
+{
+l *= 10;
+k--;
+}
 while (n > 0)
 {
-b = n / 10**k;
+b = n / l;
 _putchar(b + '0');
-n -= b * 10**k;
+n -= b * l;
+l /= 10;
 }
 }
