@@ -3,13 +3,12 @@
  * print_number - prints an integer using _putchar
  * @n: the integer to print
  *
- * Description: This function prints an integer one character at a time using _putchar
+ * Description: This function prints an integer one character at a time
  */
 void print_number(int n)
 {
 unsigned int b, a, l = 1;
-int k = 0;
-int x = 0;
+int k = 0, x = 0;
 if (n < 0)
 {
 _putchar('-');
@@ -26,8 +25,7 @@ while (b > 0)
 b /= 10;
 k++;
 }
-x = k;
-k--;
+x = k--;
 while (k > 0)
 {
 l *= 10;
