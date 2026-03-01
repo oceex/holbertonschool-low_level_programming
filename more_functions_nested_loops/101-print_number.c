@@ -28,15 +28,14 @@ k++;
 x = k--;
 while (k > 0)
 {
-l *= 10;
-k--;
+l *= 10; k--;
 }
 while (a > 0)
 {
 b = a / l;
 _putchar(b + '0');
 k++;
-a -= b * l;
+a -= (b * l);
 l /= 10;
 }
 while (k < x)
