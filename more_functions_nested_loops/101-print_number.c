@@ -1,5 +1,4 @@
 # include "main.h"
-# include <stdlib.h>
 /**
  * print_number - prints an integer using _putchar
  * @n: the integer to print
@@ -11,8 +10,10 @@
 void print_number(int n)
 {
 if (n < 0)
+{
 _putchar('-');
-n = abs(n);
+n = -n;
+}
 while (n > 0)
 {
 _putchar( n % 10 + '0');
