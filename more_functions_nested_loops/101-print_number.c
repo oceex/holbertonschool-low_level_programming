@@ -19,8 +19,6 @@ _putchar('-');
 b = -b;
 n = -n;
 }
-if (n == 0)
-_putchar('0');
 while (b > 0)
 {
 b /= 10;
