@@ -13,26 +13,18 @@
 int main(void)
 {
 unsigned long n = 612852475143;
-unsigned long i;
-unsigned long j;
-int k;
-
-for (i = n - 1; i > 0; i--)
+unsigned long i = 2;
+unsigned long j = 0;
+while (n > 1)
 {
-k = 0;
-if (n % i ==0)
+if (n % i == 0)
 {
-for (j = i; j > 0; j--)
-{
-if (i % j == 0)
-k++;
+j = i;
+n /= i;
 }
-if (k <= 2)
-{
-printf("%lu\n", i);
-break;
+else
+i++;
 }
-}
-}
+printf("%lu\n", j);
 return (0);
 }
