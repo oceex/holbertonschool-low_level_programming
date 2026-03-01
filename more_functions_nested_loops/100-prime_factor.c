@@ -33,5 +33,6 @@ printf("%lu\n", i);
 break;
 }
 }
+}
 return (0);
 }
