@@ -32,7 +32,7 @@ while (k > 0)
 l *= 10;
 k--;
 }
-while (n > 0)
+while (n >= 0)
 {
 b = n / l;
 _putchar(b + '0');
