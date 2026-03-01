@@ -9,16 +9,18 @@
  */
 void print_number(int n)
 {
-int b = n;
+unsigned int b;
 int k = 0;
 int l = 1;
 int x = 0;
 if (n < 0)
 {
 _putchar('-');
-b = -b;
+b = -n;
 n = -n;
 }
+else
+b = n;
 while (b > 0)
 {
 b /= 10;
