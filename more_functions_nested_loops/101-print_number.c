@@ -3,16 +3,12 @@
  * print_number - prints an integer using _putchar
  * @n: the integer to print
  *
- * Description: This function prints an integer one character at a time
- * using only _putchar. It handles negative numbers and prints digits
- * in the correct order using recursion.
+ * Description: This function prints an integer one character at a time using _putchar
  */
 void print_number(int n)
 {
-unsigned int b;
-unsigned int a;
+unsigned int b, a, l = 1;
 int k = 0;
-unsigned int l = 1;
 int x = 0;
 if (n < 0)
 {
