@@ -10,7 +10,8 @@
  */
 void print_array(int *a, int n)
 {
-int i, j = sizeof(a) / sizeof(int);
+int i;
+int j = sizeof(a) / sizeof(int);
 if ((n > j) || (n < 0))
 {
 printf("\n");
