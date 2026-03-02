@@ -1,0 +1,14 @@
+# include "main.h"
+/**
+ * puts2 - prints every other character of a string
+ * @str: pointer to the string to print
+ *
+ * Description: prints characters at even indices, followed by a new line.
+ */
+void puts2(char *str)
+{
+int i = -1;
+while (str[++i] != '\0')
+_putchar(str[i++]);
+_putchar('\n');
+}
