@@ -13,11 +13,12 @@ int _atoi(char *s)
 int i = -1;
 int n = 0;
 int b = 1;
+int o = 1;
 while (s[++i] != '\0')
 {
 if (s[i] == '-')
 {
-n *= -1;
+o *= -1;
 continue;
 }
 if ((s[i] == ' ') || (s[i] == '\t'))
@@ -27,5 +28,5 @@ n = n * 10 + (s[i] - '0');
 else
 b--;
 }
-return (n);
+return (n * o);
 }
