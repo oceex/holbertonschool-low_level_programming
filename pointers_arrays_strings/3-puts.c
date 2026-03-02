@@ -11,5 +11,5 @@ int i = -1;
 do {
 _putchar(str[++i]);
 } while (str[i] != '\0');
-
+_putchar('\n');
 }
