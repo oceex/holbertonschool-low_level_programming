@@ -16,8 +16,9 @@ int b = 1;
 int o = 1;
 while (s[++i] != '\0')
 {
-if (s[i] == '-')
+if ((s[i] == '-') || (s[i] == '+'))
 {
+if (s[i] == '-')
 o *= -1;
 continue;
 }
