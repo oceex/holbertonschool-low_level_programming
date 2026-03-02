@@ -26,7 +26,7 @@ continue;
 if ((s[i] >= '0') && (s[i] <= '9') && (b))
 n = n * 10 + (s[i] - '0');
 else
-b--;
+b = 0;
 }
 return (n * o);
 }
