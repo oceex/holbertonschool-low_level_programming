@@ -11,8 +11,7 @@
 void print_array(int *a, int n)
 {
 int i;
-int j = sizeof(a) / sizeof(int);
-if ((n > j) || (n < 0))
+if (n <= 0)
 printf("\n");
 else
 for (i = 0; i < n; i++)
