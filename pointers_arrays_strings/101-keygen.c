@@ -12,7 +12,7 @@ int i;
 srand(time(NULL));
 while (n != 0)
 {
-i = rand() % 255;
+i = (rand() % 94) + 33;
 if (i > n)
 i = n;
 printf("%c", i);
