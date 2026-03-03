@@ -8,9 +8,9 @@
  */
 
 int main() {
-srand(time(NULL));
 int s = rand() % 20;
 int i;
+srand(time(NULL));
 for (i = 0; i <= s; i++)
 printf("%c", 32 + (rand() % 95));
 
