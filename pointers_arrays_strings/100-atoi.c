@@ -28,12 +28,12 @@ continue;
 if ((s[i] >= '0') && (s[i] <= '9') && (b))
 {
 a = 0;
-n = n * 10 + (s[i] - '0' );
+n = n * 10 + (s[i] - '0');
 }
 else if (a)
 continue;
 else
 b = 0;
 }
-return (n * o);
+return (n *o);
 }
