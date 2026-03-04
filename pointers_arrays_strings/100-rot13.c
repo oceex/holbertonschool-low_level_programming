@@ -13,11 +13,11 @@
  */
 char *rot13(char *s)
 {
-int i = 0;
+int i = 0, n = 65, k = 13;
 while (s[i] != '\0')
-if (((s[i] >= 'a') && (s[i] <= 'm')) || ((s[i] >= 'A') && (s[i] <= 'M')))
-s[i] += 13;
-else
-s[i] -= 13;
+for (; n != n + 13; n += 13, k*= -1 )
+if (((s[i] >= n) && (s[i] <= n + 12)) || ((s[i] >= n + 32) && (s[i] <= n + 44)))
+s[i] += k;
+
 return (s);
 }
