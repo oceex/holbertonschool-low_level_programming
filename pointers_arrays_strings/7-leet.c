@@ -19,6 +19,7 @@ char k [] = "xA4E3O0T7L1";
 char m [] = "xa4e3o0t7l1";
 while (s[i] != '\0')
 {
+j = 1;
 for (; j <= 10; j++)
 if (((s[i] == k[j]) && (j % 2 != 0)) || ((s[i] == m[j]) && (j % 2 != 0)))
 {
