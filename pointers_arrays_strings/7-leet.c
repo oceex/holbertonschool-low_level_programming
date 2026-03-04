@@ -15,8 +15,8 @@
 char *leet(char *s)
 {
 int i = 0, j = 1;
-char k [] = "xA4E3O0T7L1";
-char m [] = "xa4e3o0t7l1";
+char k[] = "xA4E3O0T7L1";
+char m[] = "xa4e3o0t7l1";
 while (s[i] != '\0')
 {
 j = 1;
