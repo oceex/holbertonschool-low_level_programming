@@ -9,33 +9,20 @@
  */
 void print_number(int n)
 {
-unsigned int m = 0, b = 0, x = 1;
-int c = 0;
+unsigned int m = 0, x = 1;
 if (n < 0)
 {
 m = -n;
 _putchar('-');
 }
-else if (n == 0)
-_putchar('0');
 else
 m = n;
-b = m;
-while (b > 0)
-{
-b /= 10;
-c++;
-}
-c--;
-while (c > 0)
-{
+while (m / x >= 10)
 x *= 10;
-c--;
-}
-while (m > 0)
+while (x > 0)
 {
 _putchar(m / x + '0');
-m %= x * 10;
+m %= x;
 x /= 10;
 }
 }
