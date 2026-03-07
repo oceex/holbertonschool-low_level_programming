@@ -16,6 +16,8 @@ if (n < 0)
 m = -n;
 _putchar('-');
 }
+else if (n == 0)
+_putchar('0');
 else
 m = n;
 b = m;
