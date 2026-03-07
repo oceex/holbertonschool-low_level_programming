@@ -34,9 +34,8 @@ c--;
 }
 while (m > 0)
 {
-_putchar('0'+ m/x);
-m %= x*10;
+_putchar(m / x + '0');
+m %= x * 10;
 x /= 10;
 }
-_putchar('\n');
 }
