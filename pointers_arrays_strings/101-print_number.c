@@ -38,4 +38,5 @@ _putchar('0'+ m/x);
 m %= x*10;
 x /= 10;
 }
+_putchar('\n');
 }
