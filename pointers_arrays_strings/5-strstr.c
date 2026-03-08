@@ -17,7 +17,7 @@ if (haystack[i] == *needle)
 {
 n = i;
 j = 0;
-while ((haystack[i] == needle[j]) && (needle[j] != '\0'))
+while ((haystack[n] == needle[j]) && (needle[j] != '\0'))
 {
 n++;
 j++;
