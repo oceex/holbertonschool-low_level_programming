@@ -23,7 +23,7 @@ k++;
 j++;
 }
 if (accept[j] == '\0')
-return (&s[i])
+return (&s[i]);
 }
 i++;
 }
