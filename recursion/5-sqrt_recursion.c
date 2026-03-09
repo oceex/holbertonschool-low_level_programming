@@ -11,7 +11,7 @@
  */
 int _sqrt_recursion(int n)
 {
-return _sqrt(n, 1);
+return (_sqrt(n, 1));
 }
 /**
  * find_sqrt - Helper function to find the natural square root.
