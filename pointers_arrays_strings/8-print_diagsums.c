@@ -15,9 +15,9 @@ for (i = 0; i < size; i++)
 for (j = 0; j < size; j++)
 {
 if (i == j)
-m += a[i][j];
+m += a[i * size + j];
 if (i + j == size - 1)
-n += a[i][j];
+n += a[i * size + j];
 }
-printf("%ud, %ud", m, n);
+printf("%d, %d", m, n);
 }
