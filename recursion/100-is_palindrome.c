@@ -8,7 +8,7 @@
 int is_palindrome(char *s)
 {
 char *r;
-if ((*s == '\0') || (s + 1 == '\0'))
+if (*s == '\0')
 return (1);
 r = _rev_recursion(s);
 return (_comp(s, r));
