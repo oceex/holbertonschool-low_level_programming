@@ -14,7 +14,7 @@ int _sqrt_recursion(int n)
 return (_sqrt(n, 1));
 }
 /**
- * find_sqrt - Helper function to find the natural square root.
+ * _sqrt - Helper function to find the natural square root.
  * @n: The number to compute the square root of.
  * @i: The current guess.
  *
