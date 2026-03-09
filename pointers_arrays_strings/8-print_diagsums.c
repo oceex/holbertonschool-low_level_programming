@@ -19,5 +19,5 @@ m += a[i * size + j];
 if (i + j == size - 1)
 n += a[i * size + j];
 }
-printf("%d, %d", m, n);
+printf("%d, %d\n", m, n);
 }
