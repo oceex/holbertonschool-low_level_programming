@@ -19,5 +19,6 @@ k = nk1 + nk2;
 l = snprintf(NULL, 0, "%ld", k);
 if (l + 1 < size_r)
 return (0);
-return (snprintf(r, size_r, "%ld", k));
+snprintf(r, size_r, "%ld", k);
+return (r);
 }
