@@ -13,12 +13,20 @@
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 char *n;
-long unsigned k = 0, nk1 = strtol(n1,&n,10), nk2 =  strtol(n2,&n,10);
+unsigned long nk1, nk2, k;
 int l;
+
+nk1 = strtoul(n1, &n, 10);
+nk2 = strtoul(n2, &n, 10);
+
 k = nk1 + nk2;
+
 l = snprintf(NULL, 0, "%lu", k);
+
 if (l + 1 > size_r)
 return (0);
+
 snprintf(r, size_r, "%lu", k);
+
 return (r);
 }
