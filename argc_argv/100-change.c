@@ -22,12 +22,7 @@ printf("0\n");
 else
 {
 n = atoi(argv[1]);
-if (n % 2 == 1)
-{
-n -= 1;
-k++;
-}
-while (n != 0)
+while (n > 0)
 {
 if (n >= 25)
 {
@@ -47,6 +42,11 @@ k++;
 else if (n >= 2)
 {
 n -= 2;
+k++;
+}
+else if (n == 1)
+{
+n--;
 k++;
 }
 }
