@@ -10,11 +10,11 @@
 int main(int argc, char *argv[])
 {
 int k = 0, i = 1, n = 0;
-int *m;
+char *m;
 for (; i < argc; i++)
 {
 n = strtol(argv[i], &m, 10);
-if (m != '\0')
+if (*m != '\0')
 {
 printf("Error\n");
 return (0);
