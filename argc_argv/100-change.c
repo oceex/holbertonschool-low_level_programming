@@ -15,7 +15,7 @@ if (argc != 2)
 printf("Error\n");
 return (1);
 }
-else if (n < 0)
+else if (atoi(argv[1]) < 0)
 {
 printf("0\n");
 }
