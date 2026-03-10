@@ -17,7 +17,7 @@ long unsigned int k = 0, nk1 = strtol(n1,&n,10), nk2 =  strtol(n2,&n,10);
 int l;
 k = nk1 + nk2;
 l = snprintf(NULL, 0, "%ld", k);
-if (l + 1 < size_r)
+if (l + 1 > size_r)
 return (0);
 snprintf(r, size_r, "%ld", k);
 return (r);
