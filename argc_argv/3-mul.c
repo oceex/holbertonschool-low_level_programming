@@ -12,6 +12,9 @@ int main(int argc, char *argv[])
 int k = 1, i = 1;
 for (; i < argc; i++)
 k *= atoi(argv[i]);
+if (argc != 3)
+printf("Error");
+else
 printf("%d\n", k);
 return (0);
 }
