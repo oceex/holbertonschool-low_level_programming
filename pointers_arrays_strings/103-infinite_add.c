@@ -10,18 +10,6 @@
  *
  * Return: pointer to result, or 0 if result cannot fit
  */
-#include <stdio.h>
-#include <stdlib.h>
-
-/**
- * infinite_add - adds two numbers stored as strings
- * @n1: first number
- * @n2: second number
- * @r: buffer to store result
- * @size_r: size of buffer
- *
- * Return: pointer to result, or 0 if result cannot fit
- */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 int i = 0, j = 0, k = size_r - 1;
