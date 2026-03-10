@@ -13,7 +13,7 @@ int k = 1, i = 1;
 for (; i < argc; i++)
 k *= atoi(argv[i]);
 if (argc != 3)
-printf("Error");
+printf("Error\n");
 else
 printf("%d\n", k);
 return (0);
