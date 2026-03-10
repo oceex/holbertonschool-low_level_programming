@@ -10,23 +10,52 @@
  *
  * Return: pointer to result, or 0 if result cannot fit
  */
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * infinite_add - adds two numbers stored as strings
+ * @n1: first number
+ * @n2: second number
+ * @r: buffer to store result
+ * @size_r: size of buffer
+ *
+ * Return: pointer to result, or 0 if result cannot fit
+ */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-char *n;
-unsigned long nk1, nk2, k;
-int l;
+int i = 0, j = 0, k = size_r - 1;
+int carry = 0, sum;
 
-nk1 = strtoul(n1, &n, 10);
-nk2 = strtoul(n2, &n, 10);
+while (n1[i])
+i++;
+while (n2[j])
+j++;
 
-k = nk1 + nk2;
+r[k] = '\0';
+k--;
+i--;
+j--;
 
-l = snprintf(NULL, 0, "%lu", k);
-
-if (l + 1 > size_r)
+while (i >= 0 || j >= 0 || carry)
+{
+if (k < 0)
 return (0);
 
-snprintf(r, size_r, "%lu", k);
+sum = carry;
 
-return (r);
+if (i >= 0)
+sum += n1[i] - '0';
+if (j >= 0)
+sum += n2[j] - '0';
+
+r[k] = (sum % 10) + '0';
+carry = sum / 10;
+
+i--;
+j--;
+k--;
+}
+
+return (r + k + 1);
 }
