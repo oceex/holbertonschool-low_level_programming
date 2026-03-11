@@ -30,7 +30,7 @@ k = i;
 while (k < 10)
 {
 printf("  ");
-if (k % 2 == 1)
+if (k % 2 == 0)
 printf(" ");
 k++;
 }
