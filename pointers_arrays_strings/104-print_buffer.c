@@ -16,16 +16,16 @@ return;
 }
 while (j < size)
 {
-for (i = 0; i < 10; j++, i++)
+for (i = 0; (i < 10) && (j < size); j++, i++)
 {
 if (j % 10 == 0)
 printf("%08x: ", j);
 printf("%02x", b[j]);
-if ((j & 1) == 0)
+if ((j & 1) == 1)
 printf(" ");
 }
 
-for (i = j - 10; i < j; i++)
+for (i = j - 10; (i < j) && (i < size); i++)
 {
 if (!((b[i] >= 32) && (b[i] <= 126)))
 a = '.';
