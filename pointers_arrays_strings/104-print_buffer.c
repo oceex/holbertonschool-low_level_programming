@@ -27,10 +27,10 @@ printf(" ");
 
 for (i = j - 10; i < j; i++)
 {
-if (!((b[j] >= 32) && (b[j] <= 126)))
+if (!((b[i] >= 32) && (b[i] <= 126)))
 a = '.';
 else
-a = b[j];
+a = b[i];
 printf("%c", a);
 }
 printf("\n");
