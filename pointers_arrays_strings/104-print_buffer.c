@@ -7,17 +7,32 @@
  */
 void print_buffer(char *b, int size)
 {
-int j = 0;
+int j = 0, i = 0;
+char a, c;
 if (size <= 0)
 {
 printf("\n");
 return;
 }
-for (; j < size; j+=10)
+while (j < size)
 {
-printf("%08x: %02x%02x %02x%02x", j, b[j], b[j + 1], b[j + 2], b[j + 3]);
-printf(" %x%x %x%x %x%x ", b[j + 4], b[j + 5], b[j + 6], b[j + 7], b[j + 8], b[j + 9]);
-printf("%c%c%c%c%c",  b[j], b[j + 1], b[j + 2], b[j + 3], b[j + 4]);
-printf("%c%c%c%c%c\n", b[j + 5], b[j + 6], b[j + 7], b[j + 8], b[j + 9]);
+for (i = 0; i < 10; j++, i++)
+{
+if (j % 10 == 0)
+printf("%08x: ", j);
+printf("%02x", b[j]);
+if ((j & 1) == 0)
+printf(" ");
+}
+
+for (i = j - 10; i < j; i++)
+{
+if (!((b[j] >= 32) && (b[j] <= 126)))
+a = '.';
+else
+a = b[j];
+printf("%c", a);
+}
+printf("\n");
 }
 }
