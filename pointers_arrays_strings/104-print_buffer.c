@@ -7,7 +7,7 @@
  */
 void print_buffer(char *b, int size)
 {
-int j = 0, i = 0;
+int j = 0, i = 0, k;
 char a;
 if (size <= 0)
 {
@@ -26,7 +26,14 @@ printf(" ");
 else if (j + 1 == size)
 printf(" ");
 }
-
+k = i;
+while (k < 10)
+{
+printf("  ");
+if (k % 2 == 1)
+printf(" ");
+k++;
+}
 for (i = j - i; (i < j) && (i < size); i++)
 {
 if (!((b[i] >= 32) && (b[i] <= 126)))
