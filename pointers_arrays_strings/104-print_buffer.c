@@ -25,7 +25,7 @@ if ((j & 1) == 1)
 printf(" ");
 }
 
-for (i = j - 10; (i < j) && (i < size); i++)
+for (i = j - i; (i < j) && (i < size); i++)
 {
 if (!((b[i] >= 32) && (b[i] <= 126)))
 a = '.';
