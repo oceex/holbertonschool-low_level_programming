@@ -23,7 +23,7 @@ printf("%08x: ", j);
 printf("%02x", b[j]);
 if ((j & 1) == 1)
 printf(" ");
-else if (j - 2 == size)
+else if (j + 1 == size)
 printf(" ");
 }
 
