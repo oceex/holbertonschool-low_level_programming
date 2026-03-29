@@ -16,5 +16,5 @@ arr = malloc(size);
 if (arr == NULL)
 return (NULL);
 arr[0] = c;
-return (&arr);
+return (arr);
 }
