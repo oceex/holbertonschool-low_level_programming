@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 /**
   * create_array - creat an array with a spisific size
   * @size: the size of the array
