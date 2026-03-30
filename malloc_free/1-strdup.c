@@ -15,11 +15,10 @@ if (str == NULL)
 return (NULL);
 while (str[i] != '\0')
 i++;
-x = malloc(sizeof(char) * i);
+x = malloc(sizeof(char) * (i + 1));
 if (x == NULL)
 return (NULL);
-for (; j < i; j++)
+for (; j <= i; j++)
 x[j] = str[j];
-free(str);
 return (x);
 }
