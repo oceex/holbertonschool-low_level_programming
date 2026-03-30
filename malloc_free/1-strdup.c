@@ -18,7 +18,7 @@ i++;
 x = malloc(sizeof(char) * i);
 if (x == NULL)
 return (NULL);
-for (; j <= i; j++)
+for (; j < i; j++)
 x[j] = str[j];
 return (x);
 }
