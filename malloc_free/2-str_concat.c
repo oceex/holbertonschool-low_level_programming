@@ -24,7 +24,7 @@ if (adjoin == NULL)
 return (NULL);
 for (; z < i; z++)
 adjoin[z] = s1[z];
-for (; z < j + i; z++, h++)
+for (; z <= j + i; z++, h++)
 adjoin[z] = s2[h];
 adjoin[z] = '\0';
 return (adjoin);
