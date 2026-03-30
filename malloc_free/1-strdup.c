@@ -13,7 +13,7 @@ int i = 0, j = 0;
 char *x;
 if (str == NULL)
 return (NULL);
-while (str != '\0')
+while (str[i] != '\0')
 i++;
 x = malloc(i);
 if (x == NULL)
