@@ -5,7 +5,7 @@
   * _strdup - it makes a double str for a spisifec string.
   * @str: the string that we want to make a double from it.
   *
-  * Return : returns the new string address or NULL if not.
+  * Return: returns the new string address or NULL if not.
   */
 char *_strdup(char *str)
 {
@@ -20,5 +20,6 @@ if (x == NULL)
 return (NULL);
 for (; j < i; j++)
 x[j] = str[j];
+free(str);
 return (x);
 }
