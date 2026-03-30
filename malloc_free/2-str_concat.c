@@ -10,7 +10,7 @@
   */
 char *str_concat(char *s1, char *s2)
 {
-int i = 0, j = 0, z = 0;
+int i = 0, j = 0, z = 0, h = 0;
 char *adjoin;
 while ((s1[i] != '\0') && (s2[j] != '\0'))
 {
@@ -25,7 +25,7 @@ return (NULL);
 z = i + j - 1;
 for (; z < i; z++)
 adjoin[z] = s1[z];
-for (z = 0; z <= j; z++)
-adjoin[z] = s2[z];
+for (; z <= j + i; z++, h++)
+adjoin[z] = s2[h];
 return (adjoin);
 }
