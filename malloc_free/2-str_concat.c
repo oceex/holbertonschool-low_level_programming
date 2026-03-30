@@ -12,7 +12,7 @@ char *str_concat(char *s1, char *s2)
 {
 int i = 0, j = 0, z = 0, h = 0;
 char *adjoin;
-bool m = 1, n = 1;
+int m = 1, n = 1;
 if ((s1 == NULL) || (s1[0] == '\0'))
 m = 0;
 if ((s2 == NULL) || (s2[0] == '\0'))
