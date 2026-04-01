@@ -10,28 +10,27 @@
   */
 char *str_concat(char *s1, char *s2)
 {
-int i = 0, j = 0, z = 0, h = 0;
+int i = 0, j = 0, z = 0, k = 1;
 char *adjoin;
-int m = 1, n = 1;
-if ((s1 == NULL) || (s1[0] == '\0'))
-m = 0;
-if ((s2 == NULL) || (s2[0] == '\0'))
-n = 0;
 while ((s1[i] != '\0') && (s2[j] != '\0'))
 {
-if ((s1[i] != '\0') && (m))
+if ((s1[i] != '\0') && (k))
 i++;
-if ((s2[j] != '\0') && (n))
+else if (i == 0)
+{
+i++;
+k = 0;
+}
+if (s2[j] != '\0')
 j++;
 }
-
+j++;
 adjoin = malloc(sizeof(char) * (i + j));
 if (adjoin == NULL)
 return (NULL);
 for (; z < i; z++)
 adjoin[z] = s1[z];
-for (; z <= j + i; z++, h++)
-adjoin[z] = s2[h];
-adjoin[z] = '\0';
+for (; z < j + i; z++)
+adjoin[z] = s2[z - i];
 return (adjoin);
 }
