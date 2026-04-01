@@ -14,7 +14,12 @@ for (; j < width; j++)
 {
 k[j] = malloc(sizeof(int) * width);
 if (k[j] == NULL)
+{
+for (; i < j; i++)
+free(k[j]);
+free(k);
 return (NULL);
+}
 }
 for (i = 0; i < height; i++)
 {
