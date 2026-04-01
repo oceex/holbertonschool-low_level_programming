@@ -23,7 +23,7 @@ j++;
 else if ((j == 0) && (s2 != NULL))
 n = 0;
 }
-adjoin = malloc(sizeof(char) * (i + j - 3));
+adjoin = malloc(sizeof(char) * (i + j + 1));
 if (adjoin == NULL)
 return (NULL);
 for (; z < i; z++)
