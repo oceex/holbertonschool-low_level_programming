@@ -16,11 +16,11 @@ k[j] = malloc(sizeof(int) * width);
 if (k[j] == NULL)
 return (NULL);
 }
-for (; i < height; i++)
+for (i = 0; i < height; i++)
 {
-for (; j < width; j++)
+for (j = 0; j < width; j++)
 {
-k[i][j + height] = 0;
+k[i][j] = 0;
 }
 }
 return (k);
