@@ -13,12 +13,12 @@ int i = 0, j = 0;
 int **k;
 if ((width <= 0) || (height <= 0))
 return (NULL);
-k = malloc(sizeof(int *) * (height - 1));
+k = malloc(height * sizeof(int *));
 if (k == NULL)
 return (NULL);
 for (j = 0; j < width; j++)
 {
-k[j] = (int *) malloc(sizeof(int) * (width - 1));
+k[j] = malloc(width * sizeof(int));
 if (k[j] == NULL)
 {
 for (i = 0; i < j; i++)
