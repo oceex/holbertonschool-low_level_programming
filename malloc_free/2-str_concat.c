@@ -12,7 +12,7 @@ char *str_concat(char *s1, char *s2)
 {
 int i = 0, j = 0, z = 0, k = 1;
 char *adjoin;
-while ((s1[i] != '\0') && (s2[j] != '\0'))
+while ((s1[i] != '\0') || (s2[j] != '\0'))
 {
 if ((s1[i] != '\0') && (k))
 i++;
