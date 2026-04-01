@@ -12,10 +12,10 @@ if (k == NULL)
 return (NULL);
 for (j = 0; j < width; j++)
 {
-k[j] = malloc(sizeof(int) * (width + 1));
+k[j] = (int *)malloc(sizeof(int) * (width + 1));
 if (k[j] == NULL)
 {
-for (; i < j; i++)
+for (i = 0; i < j; i++)
 free(k[j]);
 free(k);
 return (NULL);
