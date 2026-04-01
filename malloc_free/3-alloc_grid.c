@@ -13,7 +13,7 @@ int i = 0, j = 0;
 int **k;
 if ((width <= 0) || (height <= 0))
 return (NULL);
-k = malloc(sizeof(int *) * (height + 1));
+k = malloc(sizeof(int *) * (height - 1));
 if (k == NULL)
 return (NULL);
 for (j = 0; j < width; j++)
