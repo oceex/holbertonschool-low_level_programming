@@ -1,8 +1,8 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-
-/** malloc_checked - to exit ;> the faul errors.
+/**
+  * malloc_checked - to exit ;> the faul errors.
   * @b: the size the wanted to be allocated.
   *
   * Return: NO return.
