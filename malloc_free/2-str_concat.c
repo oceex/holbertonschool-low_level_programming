@@ -12,24 +12,17 @@ char *str_concat(char *s1, char *s2)
 {
 int i = 0, j = 0, z = 0, m = 1, n = 1;
 char *adjoin;
-while ((s1[i] != '\0') || (s2[j] != '\0'))
+while (((s1 != NULL) && (s1[i] != '\0')) || ((s2 != NULL) && (s2[j] != '\0')))
 {
 if ((s1 != NULL) && (s1[i] != '\0') && (m))
 i++;
 else if ((i == 0) && (s1 != NULL))
-{
-i++;
-m = 0;
-}
+i = 0, m = 0;
 if ((s2 != NULL) && (s2[j] != '\0') && (n))
 j++;
 else if ((j == 0) && (s2 != NULL))
-{
-j++;
-n = 0;
-}
-}
-adjoin = malloc(sizeof(char) * (i + j - 1));
+j = 1, n = 0;
+adjoin = malloc(sizeof(char) * (i + j));
 if (adjoin == NULL)
 return (NULL);
 for (; z < i; z++)
