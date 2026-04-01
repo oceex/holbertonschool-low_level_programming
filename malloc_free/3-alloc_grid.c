@@ -7,12 +7,12 @@ int i = 0, j = 0;
 int **k;
 if ((width <= 0) || (height <= 0))
 return (NULL);
-k = malloc(sizeof(int *) * width);
+k = malloc(sizeof(int *) * height);
 if (k == NULL)
 return (NULL);
-for (; j < height; j++)
+for (j = 0; j < width; j++)
 {
-k[j] = malloc(sizeof(int) * height);
+k[j] = malloc(sizeof(int) * (width + 1));
 if (k[j] == NULL)
 {
 for (; i < j; i++)
