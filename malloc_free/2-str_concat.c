@@ -17,13 +17,13 @@ while (((s1 != NULL) && (s1[i] != '\0')) || ((s2 != NULL) && (s2[j] != '\0')))
 if ((s1 != NULL) && (s1[i] != '\0') && (m))
 i++;
 else if ((i == 0) && (s1 != NULL))
-i = 0, m = 0;
+i = 1, m = 0;
 if ((s2 != NULL) && (s2[j] != '\0') && (n))
 j++;
 else if ((j == 0) && (s2 != NULL))
 j = 1, n = 0;
 }
-adjoin = malloc(sizeof(char) * (i + j));
+adjoin = malloc(sizeof(char) * (i + j - 1));
 if (adjoin == NULL)
 return (NULL);
 for (; z < i; z++)
