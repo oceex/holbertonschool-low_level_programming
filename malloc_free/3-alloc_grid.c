@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+/**
+  * alloc_grid - a method that allocate and creat an array of int with 0 amount.
+  * @width: the width of the array (colmns).
+  * @height: the height of the array (rows).
+  *
+  * Return: return the 2D array.
+  */
 int **alloc_grid(int width, int height)
 {
 int i = 0, j = 0;
