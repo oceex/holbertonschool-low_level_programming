@@ -14,7 +14,7 @@ for (; i < height; i++)
 {
 for (; j < width; j++)
 {
-k[i][j + i] = 0;
+k[i][j + height] = 0;
 }
 }
 return (k);
