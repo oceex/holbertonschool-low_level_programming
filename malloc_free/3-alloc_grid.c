@@ -18,7 +18,7 @@ if (k == NULL)
 return (NULL);
 for (j = 0; j < width; j++)
 {
-k[j] = (int *) malloc(sizeof(int) * (width + 1));
+k[j] = (int *) malloc(sizeof(int) * (width));
 if (k[j] == NULL)
 {
 for (i = 0; i < j; i++)
