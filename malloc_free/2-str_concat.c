@@ -22,6 +22,7 @@ if ((s2 != NULL) && (s2[j] != '\0') && (n))
 j++;
 else if ((j == 0) && (s2 != NULL))
 j = 1, n = 0;
+}
 adjoin = malloc(sizeof(char) * (i + j));
 if (adjoin == NULL)
 return (NULL);
