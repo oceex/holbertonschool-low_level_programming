@@ -22,7 +22,7 @@ k[j] = (int *) malloc(sizeof(int) * (width + 1));
 if (k[j] == NULL)
 {
 for (i = 0; i < j; i++)
-free(k[j]);
+free(k[i]);
 free(k);
 return (NULL);
 }
