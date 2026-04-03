@@ -19,13 +19,9 @@ if (d->name == NULL)
 k = "(nil)";
 else
 k = d->name;
-printf("Name: %s", (char *)k);
+printf("Name: %s/n", (char *)k);
 
-if (d->age == NULL)
-k = "(nil)";
-else
-k = d->age;
-printf("Age: %d", (float *)k);
+printf("Age: %d/n", (float *)k);
 
 if (d->owner == NULL)
 k = "(nil)";
