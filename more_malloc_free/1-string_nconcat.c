@@ -6,8 +6,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 unsigned int i = 0, j = 0, z = 0;
 char *k;
 if ((s1 != NULL) && (s1[i] !='\0'))
+{
+i++;
 while (s1[i + 1] != '\0')
 i++;
+}
 if ((s2 != NULL) && (s2[j] !='\0'))
 while (s2[j] != '\0')
 j++;
