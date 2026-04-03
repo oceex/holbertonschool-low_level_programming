@@ -1,7 +1,7 @@
 #ifndef DOG_H
 #define DOG_H
 /**
-  * dog - this stuct contains the dog info.
+  * struct dog - this stuct contains the dog info.
   * @name: the dog name.
   * @age: the dog age.
   * @owner: the dog's owner.
