@@ -31,7 +31,7 @@ return (NULL);
 k->owner = malloc(sizeof(char) * (j + 1));
 if (k->owner == NULL)
 {
-free (k->name);
+free(k->name);
 free(k);
 return (NULL);
 }
