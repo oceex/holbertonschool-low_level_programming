@@ -19,7 +19,7 @@ if ((s2 != NULL) && (s2[j] !='\0'))
 while (s2[j] != '\0')
 j++;
 n = (n > j)? j : n;
-k = malloc(sizeof(int) * (i + n + 1));
+k = malloc(sizeof(char) * (i + n + 1));
 if (k == NULL)
 return (NULL);
 for (; z < i; z++)
