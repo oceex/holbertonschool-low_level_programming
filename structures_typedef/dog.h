@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 /**
   * dog - this stuct contains the dog info.
   * @name: the dog name.
