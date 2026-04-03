@@ -1,4 +1,4 @@
-{
+#pragma once
 #include <stdio.h>
 #include <stdlib.h>
 /**
@@ -15,4 +15,3 @@ char *name;
 float age;
 char *owner;
 };
-}
