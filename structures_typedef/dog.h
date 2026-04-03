@@ -1,8 +1,5 @@
 #ifndef DOG_H
 #define DOG_H
-#include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
 /**
   * dog - this stuct contains the dog info.
   * @name: the dog name.
