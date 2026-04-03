@@ -5,7 +5,7 @@
   * @min: the k[0] value.
   * @max: the k[max - min] value.
   *
-  * Descrption: is an amaizing array made by me ;>
+  * Description: it is an amaizing array made by me ;>
   * Return : return the address of the array or NULL.
   */
 int *array_range(int min, int max)
