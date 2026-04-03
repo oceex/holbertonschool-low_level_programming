@@ -19,7 +19,7 @@ if (d->name == NULL)
 k = "(nil)";
 else
 k = d->name;
-printf("Name: %c", (char *)k);
+printf("Name: %s", (char *)k);
 
 if (d->age == NULL)
 k = "(nil)";
@@ -31,5 +31,5 @@ if (d->owner == NULL)
 k = "(nil)";
 else
 k = d->owner;
-printf("Owner: %c", (char *)k);
+printf("Owner: %s", (char *)k);
 }
