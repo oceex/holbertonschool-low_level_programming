@@ -16,6 +16,6 @@ k = malloc(sizeof(int) * (max - min + 1));
 if (k == NULL)
 return (NULL);
 for (i = 0; i < (max - min + 1); i++);
-k[i] = min + i;
+k[i] = (min + i);
 return (k);
 }
