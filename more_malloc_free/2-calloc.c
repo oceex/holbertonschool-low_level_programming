@@ -19,7 +19,7 @@ k = malloc(nmemb * size);
 if (k == NULL)
 return (NULL);
 n = (char *)k;
-for (; i < nmemb; i++)
+for (; i < (nmemb * size); i++)
 n[i] = 0;
 return (k);
 }
