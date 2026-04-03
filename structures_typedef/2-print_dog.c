@@ -20,7 +20,7 @@ else
 k = d->name;
 printf("Name: %s/n", (char *)k);
 
-printf("Age: %d/n", (float *)k);
+printf("Age: %f/n", (float)k);
 
 if (d->owner == NULL)
 k = "(nil)";
