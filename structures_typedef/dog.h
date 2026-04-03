@@ -1,4 +1,6 @@
-#pragma once
+#ifndef DOG_H
+#define DOG_H
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 /**
@@ -15,3 +17,4 @@ char *name;
 float age;
 char *owner;
 };
+#endif
