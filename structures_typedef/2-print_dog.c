@@ -11,20 +11,16 @@
  */
 void print_dog(struct dog *d)
 {
-void *k;
 if (d == NULL)
 return;
 if (d->name == NULL)
-k = "(nil)";
+printf("Name: (nil)/n");
 else
-k = d->name;
-printf("Name: %s/n", k);
-k = d->age;
-printf("Age: %f/n", k);
-
+printf("Name: %s/n", d->name);
+printf("Age: %f/n", d->age);
 if (d->owner == NULL)
-k = "(nil)";
+printf("Owner: (nil)/n");
 else
-k = d->owner;
-printf("Owner: %s", k);
+printf("Owner: %s", d->owner);
+
 }
