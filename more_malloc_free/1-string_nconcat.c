@@ -3,7 +3,7 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-int i = 0, j = 0, z = 0;
+unsigned int i = 0, j = 0, z = 0;
 char *k;
 if ((s1 != NULL) && (s1[i] !='\0'))
 while (s1[i + 1] != '\0')
