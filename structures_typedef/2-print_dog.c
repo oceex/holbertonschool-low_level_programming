@@ -18,13 +18,13 @@ if (d->name == NULL)
 k = "(nil)";
 else
 k = d->name;
-printf("Name: %s/n", (char *)k);
-
-printf("Age: %f/n", (float)k);
+printf("Name: %s/n", k);
+k = d->age;
+printf("Age: %f/n", k);
 
 if (d->owner == NULL)
 k = "(nil)";
 else
 k = d->owner;
-printf("Owner: %s", (char *)k);
+printf("Owner: %s", k);
 }
