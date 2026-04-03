@@ -1,10 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+/**
+  * _calloc - this fun should work like exsactly calloc by using malloc.
+  * @nmemb: the number of element.
+  * @size: the size of each element.
+  *
+  * Return: the method should returns the address of the
+  * allocated memorey or NULL if fails.
+  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 unsigned int i = 0;
-int *k;
+char *k;
 if ((nmemb == 0) || (size == 0))
 return (NULL);
 k = malloc(nmemb * size);
