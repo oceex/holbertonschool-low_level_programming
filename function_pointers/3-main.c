@@ -6,7 +6,7 @@ int main(int argc, char* argv[])
 {
 int (*k)(int, int);
 int i = 1, j = 0, z;
-if (argv[1][j] < '0' || argv[1][j] > '9' || argv[3][j] < '0' || argv[3][j] > '9' || argc != 4)
+if (argc != 4 || argv[1][j] < '0' || argv[1][j] > '9' || argv[3][j] < '0' || argv[3][j] > '9')
 {
 printf("Error\n");
 return (98);
