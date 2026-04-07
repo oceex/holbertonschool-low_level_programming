@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 
 int (*get_op_func(char *s))(int a, int b)
 {
@@ -16,6 +18,5 @@ if (*(ops[i].op) == *s)
 return (ops[i].f);
 i++;
 }
-printf("Error/n");
-return (99);
+return (NULL);
 }
