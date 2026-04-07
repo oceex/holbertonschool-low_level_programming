@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 {
 int (*k)(int, int);
 int i = 1, j = 0, z;
-char m = argv[1][j], v = argv[3][j];
+char m = argv[1][j], v = argv[argc - 1][j];
 if (argc != 4 || m < '0' || m > '9'|| v < '0' || v > '9')
 {
 printf("Error\n");
