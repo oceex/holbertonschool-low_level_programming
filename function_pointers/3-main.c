@@ -17,15 +17,15 @@ k = get_op_func(argv[2]);
 argc++;
 if (k == NULL)
 {
-printf("Error/n");
+printf("Error\n");
 return (99);
 }
 z = k(i, j);
 if (z == 100)
 {
-printf("Error/n");
+printf("Error\n");
 return (100);
 }
-printf("%d/n", z);
+printf("%d\n", z);
 return 0;
 }
