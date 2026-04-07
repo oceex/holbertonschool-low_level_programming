@@ -14,6 +14,7 @@ return (98);
 i = atoi(argv[1]);
 j = atoi(argv[3]);
 k = get_op_func(argv[2]);
+argc++;
 if (k == NULL)
 {
 printf("Error/n");
