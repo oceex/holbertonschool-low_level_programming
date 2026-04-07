@@ -10,9 +10,12 @@ op_t ops[] = {
 {NULL, NULL}
 };
 int i = 0;
-while (i < 5)
-if (ops[i][0] == s)
-return (ops[i][1](a , b));
+while (ops[i].op != NULL)
+{
+if (*(ops[i].op) == *s)
+return (ops[i].f);
+i++;
+}
 printf("Error/n");
 return (99);
 }
