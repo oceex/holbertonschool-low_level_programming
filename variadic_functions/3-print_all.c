@@ -25,7 +25,7 @@ int i = 0, j = 0;
 char *m = "";
 va_list k;
 va_start(k, format);
-while (format[i] != '\0')
+while (format != NULL && format[i] != '\0')
 {
 j = 0;
 switch (format[i])
