@@ -21,31 +21,36 @@
  */
 void print_all(const char * const format, ...)
 {
-int i = 0;
+int i = 0, j = 0;
 char *m = "";
 va_list k;
 va_start(k, format);
 while (format[i] != '\0')
 {
+j = 0;
 switch (format[i])
 {
 case 'i':
 printf("%d", va_arg(k, int));
+j = 1;
 break;
 case 'c':
 printf("%c", va_arg(k, int));
+j = 1;
 break;
 case 'f':
 printf("%f", va_arg(k, double));
+j = 1;
 break;
 case 's':
 m = va_arg(k, char *);
 if (m == NULL)
 m = "(nil)";
 printf("%s", m);
+j = 1;
 break;
 }
-if (format[i + 1] != '\0')
+if (format[i + 1] != '\0' && j)
 printf(", ");
 i++;
 }
