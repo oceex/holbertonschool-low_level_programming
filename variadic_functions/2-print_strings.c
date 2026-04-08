@@ -17,13 +17,15 @@ char *m = "";
 va_start(k, n);
 for (; i < n; i++)
 {
-if (va_arg(k, char*) == NULL)
-m = "(nil)";
-else
 m = va_arg(k, char*);
+if (m == NULL)
+m = "(nil)";
+
 printf("%s", m);
+
 if (separator != NULL && i != n - 1)
 printf("%s", separator);
+
 }
 va_end(k);
 printf("\n");
