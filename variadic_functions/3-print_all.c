@@ -41,7 +41,7 @@ break;
 case 's':
 m = va_arg(k, char *);
 if (m == NULL)
-m = "(nil)"
+m = "(nil)";
 printf("%s", m);
 break;
 }
@@ -50,4 +50,3 @@ printf(", ");
 }
 printf("\n");
 }
-
