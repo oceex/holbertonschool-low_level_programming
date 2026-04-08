@@ -18,7 +18,7 @@ for (; i < n; i++)
 {
 printf("%d", va_arg(k, int));
 if (separator != NULL && i != n - 1)
-printf("%s ", separator);
+printf("%s", separator);
 }
 va_end(k);
 printf("\n");
