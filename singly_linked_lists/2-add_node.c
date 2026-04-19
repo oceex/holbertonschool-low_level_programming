@@ -22,7 +22,7 @@ if (adding == NULL)
 printf("Error\n");
 return (NULL);
 }
-head->next = adding;
+(*head)->next = adding;
 adding->str = str;
 adding->next = NULL;
 while (str[i] != '\0')
