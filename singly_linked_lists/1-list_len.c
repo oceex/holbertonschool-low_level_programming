@@ -14,6 +14,8 @@ size_t list_len(const list_t *h)
 {
 size_t n = 0;
 list_t *k;
+if (h == NULL)
+return (n);
 k = malloc(sizeof(list_t));
 k->next = h->next;
 while (k != NULL)
