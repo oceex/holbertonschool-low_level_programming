@@ -14,16 +14,15 @@
  */
 list_t *add_node(list_t **head, const char *str)
 {
-int len = 0;
-list_t adding;
+int len = 0, i = 0;
+list_t *adding;
 adding = malloc(sizeof(list_t));
 if (adding == NULL)
 {
 printf("Error\n");
-return (98);
+return (NULL);
 }
 head->next = adding;
-
 adding->str = str;
 adding->next = NULL;
 while (str[i] != '\0')
