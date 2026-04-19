@@ -15,7 +15,16 @@ size_t print_list(const list_t *h)
 {
 size_t n = 0;
 int i = 0;
-list_t *k = h;
+list_t *k;
+k = malloc(sizeof(list_t));
+if (k == NULL)
+{
+printf("Error\n");
+return (1);
+}
+k->str = h->str;
+k->len = h->len;
+k->next = h->next;
 while (k->next != NULL)
 {
 if (k->str == NULL)
