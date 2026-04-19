@@ -43,6 +43,6 @@ printf("\n");
 k = k->next;
 n++;
 }
-while (k->next != NULL);
+while (k->next->next != NULL);
 return (n);
 }
