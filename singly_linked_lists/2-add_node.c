@@ -34,7 +34,7 @@ return (NULL);
 while (str[i])
 i++;
 add->next = NULL;
-add->len = (i - 1);
+add->len = i;
 add->str = newS;
 (*head)->next = add;
 return (add);
