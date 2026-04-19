@@ -29,6 +29,7 @@ while (str[i] != '\0')
 {
 (adding->str)[i] = str[i];
 len++;
+i++;
 }
 adding->len = len;
 return (adding);
