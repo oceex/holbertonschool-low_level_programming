@@ -4,7 +4,8 @@
 #include <string.h>
 #include <stdio.h>
 
-typedef struct list {
+typedef struct list
+{
 char *str;
 int len;
 struct list *next;
