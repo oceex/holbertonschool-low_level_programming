@@ -23,10 +23,12 @@ printf("Error\n");
 return (NULL);
 }
 (*head)->next = adding;
-adding->str = str;
 adding->next = NULL;
 while (str[i] != '\0')
+{
+(adding->str)[i] = str[i];
 len++;
+}
 adding->len = len;
 return (adding);
 }
