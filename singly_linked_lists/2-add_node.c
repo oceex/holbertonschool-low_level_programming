@@ -21,21 +21,20 @@ newS = strdup(str);
 if (newS == NULL)
 {
 printf("Error\n");
-free(newS);
 return (NULL);
 }
 add = malloc(sizeof(list_t));
 if (add == NULL)
 {
 printf("Error\n");
-free(add);
+free(newS);
 return (NULL);
 }
-(*head)->next = add;
 while (str[i])
 i++;
-add->next = NULL;
+add->next = *head;
 add->len = i;
 add->str = newS;
+*head = add;
 return (add);
 }
