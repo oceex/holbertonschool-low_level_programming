@@ -31,11 +31,11 @@ printf("Error\n");
 free(add);
 return (NULL);
 }
+(*head)->next = add;
 while (str[i])
 i++;
 add->next = NULL;
 add->len = i;
 add->str = newS;
-(*head)->next = add;
 return (add);
 }
