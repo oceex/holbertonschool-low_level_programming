@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "lists.h"
 
 /**
@@ -22,6 +21,7 @@ if (k->str == NULL)
 {
 printf("[0] (nil)\n");
 k = k->next;
+n++;
 continue;
 }
 printf("[%d] ", k->len);
@@ -31,6 +31,7 @@ printf("%c", k->str[i]);
 }
 printf("\n");
 k = k->next;
+n++;
 }
 return (n);
 }
