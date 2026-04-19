@@ -13,7 +13,8 @@
  */
 size_t print_list(const list_t *h)
 {
-int n = 0, i = 0;
+size_t n = 0;
+int i = 0;
 list_t *k = h;
 while (k->next != NULL)
 {
@@ -27,7 +28,7 @@ continue;
 printf("[%d] ", k->len);
 for (i = 0; i < k->len; i++)
 {
-printf("%c", k->str[i]);
+printf("%c", (k->str)[i]);
 }
 printf("\n");
 k = k->next;
