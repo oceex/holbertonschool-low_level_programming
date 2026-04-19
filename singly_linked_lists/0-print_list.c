@@ -25,7 +25,7 @@ return (1);
 k->str = h->str;
 k->len = h->len;
 k->next = h->next;
-while (k->next != NULL)
+do
 {
 if (k->str == NULL)
 {
@@ -43,5 +43,6 @@ printf("\n");
 k = k->next;
 n++;
 }
+while (k->next != NULL);
 return (n);
 }
