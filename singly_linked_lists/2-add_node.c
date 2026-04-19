@@ -20,6 +20,7 @@ adding = malloc(sizeof(list_t));
 if (adding == NULL)
 {
 printf("Error\n");
+free(adding);
 return (NULL);
 }
 (*head)->next = adding;
