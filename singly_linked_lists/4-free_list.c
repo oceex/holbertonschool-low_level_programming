@@ -10,13 +10,17 @@
  */
 void free_list(list_t *head)
 {
-list_t *eren;
-while (head != NULL)
+list_t *eren, *x;
+if (head == NULL || *head == NULL)
+return;
+
+eren = *head;
+while (eren != NULL)
 {
-eren = head->next;
-if (head->str != NULL)
-free(head->str);
-free(head);
-head = eren;
+x = eren->next;
+free(eren->str);
+free(eren);
+eren = x;
 }
+*head = NULL;
 }
