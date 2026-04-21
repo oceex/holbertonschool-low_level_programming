@@ -18,4 +18,6 @@ free(head->str);
 free(head);
 head = eren;
 }
+free(head->str);
+free(head);
 }
