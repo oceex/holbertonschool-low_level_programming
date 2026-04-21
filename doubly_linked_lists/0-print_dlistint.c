@@ -21,7 +21,7 @@ x->next = h->next;
 x->prev = h->prev;
 x->n = h->n;
 
-while (x->next != NULL)
+while (x != NULL)
 {
 printf("%d\n", x->n);
 k++;
