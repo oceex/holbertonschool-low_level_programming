@@ -13,7 +13,7 @@ void free_list(list_t *head)
 list_t *eren, *x;
 if (head == NULL)
 return;
-eren = *head;
+eren = head;
 while (eren != NULL)
 {
 x = eren->next;
