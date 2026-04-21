@@ -18,8 +18,8 @@ dlistint_t *v;
 v = malloc(sizeof(dlistint_t));
 if (v == NULL)
 return (NULL);
-(*head)->prev = v;
 v->n = n;
 v->next = *head;
+(*head)->prev = v;
 return (v);
 }
