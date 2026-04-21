@@ -18,7 +18,7 @@ x = malloc(sizeof(dlistint_t));
 if (x == NULL)
 return (98);
 
-x = h;
+x = *h;
 while (x->next != NULL)
 {
 printf("%d\n", x->n);
