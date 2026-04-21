@@ -26,6 +26,5 @@ i++;
 x->len = i;
 x->str = k;
 (*head)->next = x;
-x->next = NULL;
 return (x);
 }
