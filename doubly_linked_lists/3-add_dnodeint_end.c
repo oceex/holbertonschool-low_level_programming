@@ -20,8 +20,9 @@ if (m == NULL)
 return (NULL);
 while ((*head)->next != NULL)
 *head = (*head)->next;
+(*head)->next = m;
+m->next = NULL;
 m->n = n;
 m->prev = *head;
-(*head)->next = m;
 return (m);
 }
