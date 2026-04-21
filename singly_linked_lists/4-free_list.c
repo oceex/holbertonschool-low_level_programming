@@ -19,5 +19,5 @@ free(eren->str);
 free(eren);
 eren = x;
 }
-
+head = NULL;
 }
