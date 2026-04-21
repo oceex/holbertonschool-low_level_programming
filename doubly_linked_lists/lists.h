@@ -1,0 +1,26 @@
+#ifndef LISTS_H
+#define LISTS_H
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+/**
+ * struct list - Doubly linked list node
+ * @prev: Pointer to the prev node in the list.
+ * @n: the data of the node.
+ * @next: Pointer to the next node in the list.
+ *
+ * Description:
+ * This structure defines a node of a singly linked list. Each node
+ * contains a dynamically allocated string, its length, and a pointer
+ * to the next node in the list.
+ */
+typedef struct list
+{
+struct list *prev;
+int n;
+struct list *next;
+} dlistint_t;
+
+size_t print_dlistint(const dlistint_t *h);
+
+#endif
