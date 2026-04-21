@@ -10,13 +10,12 @@
  */
 void free_list(list_t *head)
 {
-list_t *eren, *v;
-eren = *head;
-while (eren->next != NULL)
+list_t *eren;
+while (head != NULL)
 {
-v = *eren;
+eren = head->next;
 free(eren->str);
 free(eren);
-eren = *v;
+head = eren;
 }
 }
