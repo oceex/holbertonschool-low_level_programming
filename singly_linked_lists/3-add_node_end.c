@@ -25,6 +25,6 @@ while (str[i] != '\0')
 i++;
 x->len = i;
 x->str = k;
-(*head)->next = x;
+(*head)->next = *x;
 return (x);
 }
