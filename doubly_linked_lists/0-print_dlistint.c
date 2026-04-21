@@ -17,8 +17,10 @@ dlistint_t *x;
 x = malloc(sizeof(dlistint_t));
 if (x == NULL)
 return (98);
+x->next = h->next;
+x->prev = h->prev;
+x->n = h->n;
 
-x = *h;
 while (x->next != NULL)
 {
 printf("%d\n", x->n);
