@@ -11,13 +11,12 @@
 void free_list(list_t *head)
 {
 list_t *eren;
-while (head->next != NULL)
+while (head != NULL)
 {
 eren = head->next;
 free(head->str);
+free(head->next);
 free(head);
 head = eren;
 }
-free(head->str);
-free(head);
 }
