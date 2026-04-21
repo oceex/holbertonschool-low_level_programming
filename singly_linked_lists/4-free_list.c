@@ -14,8 +14,8 @@ list_t *eren;
 while (head != NULL)
 {
 eren = head->next;
+if (head->str != NULL)
 free(head->str);
-free(head->next);
 free(head);
 head = eren;
 }
