@@ -22,7 +22,7 @@ return (98);
 x->next = h->next;
 while (x != NULL)
 {
-k++:
+k++;
 x = x->next;
 }
 return (k);
