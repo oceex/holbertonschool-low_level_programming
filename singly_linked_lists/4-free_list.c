@@ -11,8 +11,6 @@
 void free_list(list_t *head)
 {
 list_t *eren, *x;
-if (head == NULL)
-return;
 eren = head;
 while (eren != NULL)
 {
@@ -21,5 +19,5 @@ free(eren->str);
 free(eren);
 eren = x;
 }
-head = NULL;
+
 }
