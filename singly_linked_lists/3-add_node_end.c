@@ -28,5 +28,6 @@ x->str = k;
 while (b->next != NULL)
 b = b->next;
 b->next = x;
+x->next = NULL;
 return (x);
 }
