@@ -18,6 +18,10 @@ unsigned int x = 0;
 while (x != index)
 {
 head = head->next;
+x++;
 }
+if (x == index)
 return (head);
+else
+return (NULL);
 }
