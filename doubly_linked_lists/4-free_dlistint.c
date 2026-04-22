@@ -12,17 +12,15 @@
  */
 void free_dlistint(dlistint_t *head)
 {
-dlistint_t *temp, *ttemp;
+dlistint_t *temp;
 if (head == NULL)
 return;
-ttemp = head;
-while (head->next != NULL)
+while (head != NULL)
 {
-temp = ttemp->next;
-free(ttemp->next);
-free(ttemp->prev);
-free(ttemp);
+temp = head->next;
+free(head->next);
+free(head->prev);
+free(head);
 head = temp;
-ttemp = head;
 }
 }
