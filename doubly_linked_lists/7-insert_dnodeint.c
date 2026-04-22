@@ -25,7 +25,7 @@ free(x);
 return (NULL);
 }
 temp = k->prev;
-*(temp)->next = x;
+temp->next = x;
 k->prev = x;
 x->n = n;
 return (x);
