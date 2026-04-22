@@ -21,6 +21,8 @@ return (NULL);
 if (head == NULL)
 {
 m->n = n;
+m->next = NULL;
+m->prev = NULL;
 return (m);
 }
 while ((*head)->next != NULL)
