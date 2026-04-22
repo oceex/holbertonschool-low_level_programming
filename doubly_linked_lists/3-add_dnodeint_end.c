@@ -18,10 +18,14 @@ dlistint_t *m;
 m = malloc(sizeof(dlistint_t));
 if (m == NULL)
 return (NULL);
+if (head == NULL)
+{
+m->n = n;
+return (m);
+}
 while ((*head)->next != NULL)
 *head = (*head)->next;
 (*head)->next = m;
-m->next = NULL;
 m->n = n;
 m->prev = *head;
 return (m);
