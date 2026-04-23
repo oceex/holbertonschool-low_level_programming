@@ -19,7 +19,7 @@ x = malloc(sizeof(dlistint_t));
 if (x == NULL)
 return (NULL);
 if (idx == 0)
-x = add_dnodeint(*h, (*h)->n)
+x = add_dnodeint(*h, (*h)->n);
 if (x == NULL)
 return (NULL);
 k = get_dnodeint_at_index(*h, idx);
