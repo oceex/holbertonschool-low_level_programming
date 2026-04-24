@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <limits.h>
 #include <string.h>
-int helping(int f1, int f2, char buf[], ssize_t r, ssize_t w, char *s, char *d);
+int helping(int f1, int f2, ssize_t r, ssize_t w, char *s, char *d);
 /**
  * main - Copies the content of a file to another file
  * @argc: Number of arguments passed to the program
@@ -77,8 +77,24 @@ return (100);
 }
 return (0);
 }
-int helping(int f1, int f2, char buf[], ssize_t r, ssize_t w, char *s, char *d)
+/**
+ * helping - Performs file copy operations between two file descriptors
+ * @f1: Source file descriptor to read from
+ * @f2: Destination file descriptor to write to
+ * @r: Number of bytes read from the source
+ * @w: Number of bytes written to the destination
+ * @s: Buffer used for reading data
+ * @d: Buffer used for writing data
+ *
+ * Description: Handles the read/write process between two file descriptors,
+ * checking for errors and ensuring data is transferred correctly.
+ *
+ * Return: 0 on success, or an error code on failure.
+ */
+
+int helping(int f1, int f2, ssize_t r, ssize_t w, char *s, char *d)
 {
+char buf[1024];
 r = read(f1, buf, 1024);
 if (r == -1)
 {
