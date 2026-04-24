@@ -59,7 +59,7 @@ dprintf(2, "Error: Can't write to %s\n", argv[2]);
 return (99);
 }
 
-i = helping(f1, f2, buf, r, w, argv[1], argv[2]);
+i = helping(f1, f2, r, w, argv[1], argv[2]);
 if (i != 0)
 return (i);
 
