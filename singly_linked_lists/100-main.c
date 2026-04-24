@@ -1,8 +1,13 @@
+#include <stdio.h>
+
 /**
-  * main - the after main.
-  */
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-    printf("This is main.\n");
-    return 0;
+    printf("(A tortoise, having pretty good sense of a hare's nature, challenges one to a race.)\n");
+    return (0);
 }
+

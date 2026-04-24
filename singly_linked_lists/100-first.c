@@ -1,4 +1,5 @@
 #include "100-main.c"
+
 void before_main(void) __attribute__((constructor));
 
 /**
