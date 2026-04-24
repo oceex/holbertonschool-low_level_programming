@@ -1,4 +1,4 @@
-#include "main.h"
+\#include "main.h"
 /**
  * read_textfile - Reads a text file and prints it to STDOUT
  * @filename: Pointer to the name of the file to read
@@ -22,6 +22,7 @@ helper = (int)letters < helper ? (int)letters : helper;
 r = read(file, buf, helper);
 while ((int)letters > helper)
 {
+buf[helper] = '\0';
 printf("%s", buf);
 if ((int)letters > helper)
 letters -= helper;
@@ -29,6 +30,7 @@ else
 helper = (int)letters;
 r = read(file, buf, helper);
 }
+buf[helper] = '\0';
 printf("%s", buf);
 close(file);
 return (r);
