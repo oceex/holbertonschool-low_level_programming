@@ -46,7 +46,7 @@ if (argc != 3)
 dprintf(2, "Usage: cp file_from file_to\n");
 return (97);
 }
-f1= open(argv[1], O_RDONLY);
+f1 = open(argv[1], O_RDONLY);
 if (f1 == -1)
 {
 dprintf(1, "Error: Can't read from file %s\n", argv[1]);
@@ -58,6 +58,25 @@ if (f2 == -1)
 dprintf(2, "Error: Can't write to %s\n", argv[2]);
 return (99);
 }
+
+helping(f1, f2, buf, r, w);
+
+c1 = close(f1);
+c2 = close(f2);
+if (c1 == -1)
+{
+dprintf(2, "Error: Can't close fd %d\n", f1);
+return (100);
+}
+if (c2 == -1)
+{
+dprintf(2, "Error: Can't close fd %d\n", f2);
+return (100);
+}
+return (0);
+}
+void heling(int f1, int f2, char buf[], ssize_t r, ssize_t w)
+{
 r = read(f1, buf, 1024);
 if (r == -1)
 {
@@ -66,7 +85,6 @@ return (98);
 }
 while (r == 1024)
 {
-
 w = write(f2, buf, r);
 if (w == -1)
 {
@@ -79,7 +97,6 @@ if (r == -1)
 dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 return (98);
 }
-
 }
 w = write(f2, buf, r);
 if (w == -1)
@@ -87,17 +104,4 @@ if (w == -1)
 dprintf(2, "Error: Can't write to %s\n", argv[2]);
 return (99);
 }
-c1 = close(f1);
-c2 = close(f2);
-if (c1 == -1)
-{
-dprintf(2,"Error: Can't close fd %d\n", f1);
-return (100);
-}
-if (c2 == -1)
-{
-dprintf(2,"Error: Can't close fd %d\n", f2);
-return (100);
-}
-return (0);
 }
