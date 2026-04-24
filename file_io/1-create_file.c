@@ -14,10 +14,10 @@ ssize_t w;
 if (filename == NULL)
 return (-1);
 
-fd = open(filename, O_TRUNC | O_CREAT, 0600);
+fd = open(filename, O_TRUNC | O_WRONLY | O_CREAT, 0600);
 if (fd == -1)
 return (-1);
-if (strlen(text_content) != 0)
+if (text_content != NULL)
 w = write (fd, text_content, strlen(text_content));
 
 if (w == -1)
