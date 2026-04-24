@@ -11,7 +11,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 int file;
 ssize_t reading;
-char buff[1024];
+char buff[INT_MAX];
 file = open(filename,O_RDONLY);
 if (file == -1)
 return (0);
