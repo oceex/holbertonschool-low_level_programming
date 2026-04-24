@@ -21,8 +21,6 @@ return (0);
 r = read(file, buf, helper);
 if (helper < (int)letters)
 letters -= helper;
-buf[helper + 1] = '\0';
-printf("%s", buf);
 while ((int)letters != helper)
 {
 if (helper < (int)letters)
@@ -31,9 +29,9 @@ else
 helper = letters;
 
 r = read(file, buf, helper);
-buf[helper + 1] = '\0';
-printf("%s", buf);
 }
+buf[letter + 1] = '\0';
+printf("%s", buf);
 close(file);
 return (r);
 }
