@@ -11,23 +11,30 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 int file;
 ssize_t r;
-char buf[1024];
 int helper = 1024;
+char buf[helper];
 if (filename == NULL)
 return (0);
 file = open(filename,O_RDONLY);
 if (file == -1)
 return (0);
-r = read(file, buf, helper - 1);
-helper = (int)letters > helper? (int)letters - helper : (int)letters;
-while (r > 0)
+r = read(file, buf, helper);
+if (helper < (int)letters)
+letters -= helper;
+while (letters != helper)
 {
-buf[helper] = '\0';
+buf[helper + 1] = '\0';
 printf("%s", buf);
-r = read(file, buf, helper - 1);
-helper = (int)letters > helper? (int)letters - helper : (int)letters;
+if (helper < (int)letters)
+letters -= helper;
+else
+helper = letters;
+
+r = read(file, buf, helper);
 }
+buf[helper + 1] = '\0';
 printf("%s", buf);
 close(file);
 return (r);
 }
+
