@@ -22,7 +22,7 @@ t = *head;
 if (index == 0)
 {
 (*head)->next->prev = NULL;
-free(head);
+free(*head);
 return (1);
 }
 while (t != NULL && i < index)
@@ -34,16 +34,14 @@ if (t == NULL)
 return (-1);
 if (t->next == NULL)
 {
-*head = t;
 t->prev->next = NULL;
-free(*head);
+free(t);
 return (1);
 }
-*head = t;
-t = t->prev;
-t->next = (*head)->next;
-t = t->next->next;
-t->prev = (*head)->prev;
-free(*head);
+
+t->prev->next = t->next;
+t->next->prev = t->prev;
+
+free(t);
 return (1);
 }
