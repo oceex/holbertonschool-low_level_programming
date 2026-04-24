@@ -35,7 +35,7 @@ w = write(1, buf, reading);
 if (w == -1 || w != reading)
 {
 free(buf);
-close(fd);
+close(file);
 return (0);
 }
 free(buf);
