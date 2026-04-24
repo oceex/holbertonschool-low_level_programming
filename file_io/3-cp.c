@@ -46,8 +46,6 @@ if (argc != 4)
 dprintf(2, "Usage: cp file_from file_to\n");
 return (97);
 }
-if (argv[1] == "cp")
-{
 f1= open(argv[2], O_WRONLY);
 if (f1 == -1)
 {
@@ -99,8 +97,6 @@ if (c2 == -1)
 dprintf(2,"Error: Can't close fd %d\n", f2);
 return (100);
 }
-}
 return (0);
-else
 return (97);
 }
