@@ -9,30 +9,40 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-int file;
-ssize_t r;
-int helper = 1024;
-char buf[1024];
-if (filename == NULL)
-return (0);
-file = open(filename,O_RDONLY);
-if (file == -1)
-return (0);
-helper = (int)letters < helper ? (int)letters : helper;
-r = read(file, buf, helper);
-while ((int)letters > helper)
-{
-buf[helper] = '\0';
-printf("%s", buf);
-if ((int)letters > helper)
-letters -= helper;
-else
-helper = (int)letters;
-r = read(file, buf, helper);
-}
-buf[helper] = '\0';
-printf("%s", buf);
+    int file;
+    ssize_t r, w;
+    char *buf;
+
+    if (filename == NULL)
+        return (0);
+
+    file = open(filename, O_RDONLY);
+    if (file == -1)
+        return (0);
+
+    buf = malloc(sizeof(char) * letters);
+    if (buf == NULL)
+    {
+        close(file);
+        return (0);
+    }
+
+    r = read(file, buf, letters);
+    if (r == -1)
+    {
+        free(buf);
+        close(file);
+        return (0);
+    }
+
+w = write(STDOUT_FILENO, buf, r);
+
+free(buf);
 close(file);
-return (r);
+
+if (w == -1 || w != r)
+return (0);
+
+return (w);
 }
 
