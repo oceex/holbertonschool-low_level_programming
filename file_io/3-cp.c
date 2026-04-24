@@ -39,7 +39,7 @@ int helping(int f1, int f2, char buf[], ssize_t r, ssize_t w, char *s, char *d);
 int main(int argc, char *argv[])
 {
 int f1, f2, c1, c2, i;
-ssize_t w, r;
+ssize_t w = 0, r = 0;
 char buf[1024];
 if (argc != 3)
 {
