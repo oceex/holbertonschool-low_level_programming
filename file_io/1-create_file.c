@@ -13,6 +13,9 @@ if (fd == -1)
 return (-1);
 while (text_content[i] != '\0')
 i++;
+if (text_content == NULL)
+i = 0;
+else
 w = write (fd, text_content, sizeof(char)*i);
 if (w == -1)
 {
