@@ -21,7 +21,7 @@ return (0);
 r = read(file, buf, helper);
 if (helper < (int)letters)
 letters -= helper;
-while (letters != (int)helper)
+while ((int)letters != helper)
 {
 buf[helper + 1] = '\0';
 printf("%s", buf);
