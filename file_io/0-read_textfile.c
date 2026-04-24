@@ -18,6 +18,6 @@ return (0);
 reading = read(file, buff, letters);
 if (reading == -1)
 return (0);
-
+close(file);
 return (reading);
 }
