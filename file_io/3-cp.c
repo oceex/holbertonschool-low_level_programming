@@ -46,7 +46,7 @@ if (argc != 3)
 dprintf(2, "Usage: cp file_from file_to\n");
 return (97);
 }
-f1= open(argv[1], O_WRONLY);
+f1= open(argv[1], O_RDONLY);
 if (f1 == -1)
 {
 dprintf(2, "Error: Can't read from file %s\n", argv[1]);
@@ -61,7 +61,7 @@ return (99);
 r = read(f1, buf, 1024);
 if (r == -1)
 {
-dprintf(2, "Error: Caqn't read from file %s\n", argv[1]);
+dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 return (98);
 }
 while (r > 0)
