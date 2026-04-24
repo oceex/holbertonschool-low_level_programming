@@ -1,11 +1,12 @@
 #include "lists.h"
+#include <stdlib.h>
 
 /**
  * delete_dnodeint_at_index - Deletes a node at a given index in a dlistint_t list
  * @head: Double pointer to the head of the doubly linked list
  * @index: The zero-based index of the node to delete
  *
- * Return: 1 on success, -1 on failure
+ * Return: 1 on success, or -1 on failure
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
@@ -22,11 +23,9 @@ if (index == 0)
 *head = tmp->next;
 if (tmp->next != NULL)
 tmp->next->prev = NULL;
-
 free(tmp);
 return (1);
 }
-
 
 while (tmp != NULL && i < index)
 {
