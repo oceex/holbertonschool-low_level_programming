@@ -66,6 +66,7 @@ return (98);
 }
 while (r == 1024)
 {
+
 w = write(f2, buf, sizeof(buf));
 if (w == -1)
 {
@@ -78,12 +79,7 @@ if (r == -1)
 dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 return (98);
 }
-}
-w = write(f2, buf, sizeof(buf));
-if (w == -1)
-{
-dprintf(2, "Error2: Can't write to %s\n", argv[2]);
-return (99);
+
 }
 c1 = close(f1);
 c2 = close(f2);
