@@ -15,7 +15,7 @@ char *buf;
 file = open(filename,O_RDONLY);
 if (file == -1)
 {
-free(file);
+close(file);
 return (0);
 }
 buf = malloc(letters);
