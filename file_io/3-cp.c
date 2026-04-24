@@ -49,7 +49,7 @@ return (97);
 f1= open(argv[1], O_RDONLY);
 if (f1 == -1)
 {
-dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+dprintf(1, "Error: Can't read from file %s\n", argv[1]);
 return (98);
 }
 f2 = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
