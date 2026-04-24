@@ -58,10 +58,10 @@ if (f2 == -1)
 dprintf(2, "Error: Can't write to %s\n", argv[2]);
 return (99);
 }
-r = read(f1, buf, 1024);
+r = read(f1, buf, 1023);
 if (r == -1)
 {
-dprintf(2, "Erro1r: Can't read from file %s\n", argv[1]);
+dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 return (98);
 }
 while (r > 0)
