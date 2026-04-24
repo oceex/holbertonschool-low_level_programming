@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <limits.h>
 #include <string.h>
-int helping(int f1, int f2, char buf[], ssize_t r, ssize_t w);
+int helping(int f1, int f2, char buf[], ssize_t r, ssize_t w, char *s, char *d);
 /**
  * main - Copies the content of a file to another file
  * @argc: Number of arguments passed to the program
@@ -59,7 +59,7 @@ dprintf(2, "Error: Can't write to %s\n", argv[2]);
 return (99);
 }
 
-i = helping(f1, f2, buf, r, w);
+i = helping(f1, f2, buf, r, w, argv[1], argv[2]);
 if (i != 0)
 return (i);
 
@@ -77,12 +77,12 @@ return (100);
 }
 return (0);
 }
-int helping(int f1, int f2, char buf[], ssize_t r, ssize_t w)
+int helping(int f1, int f2, char buf[], ssize_t r, ssize_t w, char *s, char *d)
 {
 r = read(f1, buf, 1024);
 if (r == -1)
 {
-dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+dprintf(2, "Error: Can't read from file %s\n", s);
 return (98);
 }
 while (r == 1024)
@@ -90,20 +90,20 @@ while (r == 1024)
 w = write(f2, buf, r);
 if (w == -1)
 {
-dprintf(2, "Error: Can't write to %s\n", argv[2]);
+dprintf(2, "Error: Can't write to %s\n", d);
 return (99);
 }
 r = read(f1, buf, 1024);
 if (r == -1)
 {
-dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+dprintf(2, "Error: Can't read from file %s\n", s);
 return (98);
 }
 }
 w = write(f2, buf, r);
 if (w == -1)
 {
-dprintf(2, "Error: Can't write to %s\n", argv[2]);
+dprintf(2, "Error: Can't write to %s\n", d);
 return (99);
 }
 return (0);
