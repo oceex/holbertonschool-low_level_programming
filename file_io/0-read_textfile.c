@@ -10,7 +10,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 int file;
-ssize_t reading, w;
+ssize_t reading;
 char *buf;
 file = open(filename,O_RDONLY);
 if (file == -1)
@@ -29,13 +29,6 @@ if (reading == -1)
 {
 close(file);
 free(buf);
-return (0);
-}
-w = write(1, buf, reading);
-if (w == -1 || w != reading)
-{
-free(buf);
-close(file);
 return (0);
 }
 free(buf);
