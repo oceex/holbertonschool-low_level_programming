@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <limits.h>
 #include <string.h>
-void helping(int f1, int f2, char buf[], ssize_t r, ssize_t w);
+int helping(int f1, int f2, char buf[], ssize_t r, ssize_t w);
 /**
  * main - Copies the content of a file to another file
  * @argc: Number of arguments passed to the program
@@ -38,7 +38,7 @@ void helping(int f1, int f2, char buf[], ssize_t r, ssize_t w);
  */
 int main(int argc, char *argv[])
 {
-int f1, f2, c1, c2;
+int f1, f2, c1, c2, i;
 ssize_t w, r;
 char buf[1024];
 if (argc != 3)
@@ -59,7 +59,9 @@ dprintf(2, "Error: Can't write to %s\n", argv[2]);
 return (99);
 }
 
-helping(f1, f2, buf, r, w);
+i = helping(f1, f2, buf, r, w);
+if (i != 0)
+return (i);
 
 c1 = close(f1);
 c2 = close(f2);
@@ -75,7 +77,7 @@ return (100);
 }
 return (0);
 }
-void helping(int f1, int f2, char buf[], ssize_t r, ssize_t w)
+int helping(int f1, int f2, char buf[], ssize_t r, ssize_t w)
 {
 r = read(f1, buf, 1024);
 if (r == -1)
@@ -104,4 +106,5 @@ if (w == -1)
 dprintf(2, "Error: Can't write to %s\n", argv[2]);
 return (99);
 }
+return (0);
 }
