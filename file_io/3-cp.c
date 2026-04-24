@@ -41,27 +41,27 @@ int main(int argc, char *argv[])
 int f1, f2, c1, c2;
 ssize_t w, r;
 char buf[1024];
-if (argc != 4)
+if (argc != 3)
 {
 dprintf(2, "Usage: cp file_from file_to\n");
 return (97);
 }
-f1= open(argv[2], O_WRONLY);
+f1= open(argv[1], O_WRONLY);
 if (f1 == -1)
 {
-dprintf(2, "Error: Can't read from file %s\n", argv[2]);
+dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 return (98);
 }
-f2 = open(argv[3], O_WRONLY | O_TRUNC, 0664);
+f2 = open(argv[2], O_WRONLY | O_TRUNC, 0664);
 if (f2 == -1)
 {
-dprintf(2, "Error: Can't write to %s\n", argv[3]);
+dprintf(2, "Error: Can't write to %s\n", argv[2]);
 return (99);
 }
 r = read(f1, buf, 1024);
 if (r == -1)
 {
-dprintf(2, "Error: Can't read from file %s\n", argv[2]);
+dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 return (98);
 }
 while (r > 0)
@@ -69,20 +69,20 @@ while (r > 0)
 w = write(f2, buf, sizeof(buf));
 if (w == -1)
 {
-dprintf(2, "Error: Can't write to %s\n", argv[3]);
+dprintf(2, "Error: Can't write to %s\n", argv[2]);
 return (99);
 }
 r = read(f1, buf, 1024);
 if (r == -1)
 {
-dprintf(2, "Error: Can't read from file %s\n", argv[2]);
+dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 return (98);
 }
 }
 w = write(f2, buf, sizeof(buf));
 if (w == -1)
 {
-dprintf(2, "Error: Can't write to %s\n", argv[3]);
+dprintf(2, "Error: Can't write to %s\n", argv[2]);
 return (99);
 }
 c1 = close(f1);
@@ -98,5 +98,4 @@ dprintf(2,"Error: Can't close fd %d\n", f2);
 return (100);
 }
 return (0);
-return (97);
 }
