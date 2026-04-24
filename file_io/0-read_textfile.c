@@ -14,10 +14,7 @@ ssize_t reading, w;
 char *buf;
 file = open(filename,O_RDONLY);
 if (file == -1)
-{
-close(file);
 return (0);
-}
 buf = malloc(letters);
 if (buf == NULL)
 {
