@@ -30,7 +30,7 @@ helper = letters;
 
 r = read(file, buf, helper);
 }
-buf[(int)letter + 1] = '\0';
+buf[(int)letters + 1] = '\0';
 printf("%s", buf);
 close(file);
 return (r);
