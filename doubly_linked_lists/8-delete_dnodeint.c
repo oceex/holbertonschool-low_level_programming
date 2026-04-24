@@ -25,7 +25,7 @@ if (index == 0)
 free(head);
 return (1);
 }
-while (t != NULL && i < index - 1)
+while (t != NULL && i < index)
 {
 t = t->next;
 i++;
@@ -34,12 +34,13 @@ if (t == NULL)
 return (-1);
 if (t->next == NULL)
 {
-*head = t->next;
-t->next = NULL;
+*head = t;
+t->prev->next = NULL;
 free(*head);
 return (1);
 }
-*head = t->next;
+*head = t;
+t = t->prev;
 t->next = (*head)->next;
 t = t->next->next;
 t->prev = (*head)->prev;
