@@ -19,15 +19,14 @@ file = open(filename,O_RDONLY);
 if (file == -1)
 return (0);
 r = read(file, buf, helper);
-if (helper < (int)letters)
-letters -= helper;
 while ((int)letters != helper)
 {
-if (helper < (int)letters)
+buf[helper + 1] = '\0';
+printf("%s", buf);
+if ((int)letters > helper)
 letters -= helper;
 else
-helper = letters;
-
+helper = (int)letters;
 r = read(file, buf, helper);
 }
 buf[(int)letters + 1] = '\0';
