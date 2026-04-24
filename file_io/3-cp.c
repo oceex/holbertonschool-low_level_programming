@@ -55,13 +55,13 @@ return (98);
 f2 = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
 if (f2 == -1)
 {
-dprintf(2, "Error0: Can't write to %s\n", argv[2]);
+dprintf(2, "Error: Can't write to %s\n", argv[2]);
 return (99);
 }
 r = read(f1, buf, 1024);
 if (r == -1)
 {
-dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+dprintf(2, "Erro1r: Can't read from file %s\n", argv[1]);
 return (98);
 }
 while (r > 0)
