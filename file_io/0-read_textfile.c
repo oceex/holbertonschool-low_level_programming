@@ -1,6 +1,4 @@
-#include <fcntl.h>
-#include <unistd.h>
-
+#include "main.h"
 /**
  * read_textfile - Reads a text file and prints it to STDOUT
  * @filename: Pointer to the name of the file to read
