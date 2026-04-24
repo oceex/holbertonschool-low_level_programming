@@ -19,7 +19,7 @@ file = open(filename,O_RDONLY);
 if (file == -1)
 return (0);
 r = read(file, buf, helper);
-while ((int)letters != helper)
+while ((int)letters > helper)
 {
 buf[helper + 1] = '\0';
 printf("%s", buf);
