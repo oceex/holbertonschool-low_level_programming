@@ -12,17 +12,22 @@ ssize_t read_textfile(const char *filename, size_t letters)
 int file;
 ssize_t r;
 char buf[1024];
+int helper = 1024;
 if (filename == NULL)
 return (0);
 file = open(filename,O_RDONLY);
 if (file == -1)
 return (0);
-r = read(file, buf, letters);
-if (r == -1)
+r = read(file, buf, helper - 1);
+helper = letters > helper? letters - helper : letters;
+while (r > 0)
 {
-close(file);
-return (0);
+buf[helper] = '\0';
+printf("%s", buf);
+r = read(file, buf, helper - 1);
+helper = letters > helper? letters - helper : letters;
 }
+printf("%s", buf);
 close(file);
 return (r);
 }
