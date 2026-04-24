@@ -19,13 +19,13 @@ file = open(filename,O_RDONLY);
 if (file == -1)
 return (0);
 r = read(file, buf, helper - 1);
-helper = letters > helper? letters - helper : letters;
+helper = (int)letters > helper? (int)letters - helper : (int)letters;
 while (r > 0)
 {
 buf[helper] = '\0';
 printf("%s", buf);
 r = read(file, buf, helper - 1);
-helper = letters > helper? letters - helper : letters;
+helper = (int)letters > helper? (int)letters - helper : (int)letters;
 }
 printf("%s", buf);
 close(file);
