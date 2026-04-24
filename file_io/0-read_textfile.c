@@ -12,7 +12,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 int file;
 ssize_t r;
 int helper = 1024;
-char buf[helper];
+char buf[1024];
 if (filename == NULL)
 return (0);
 file = open(filename,O_RDONLY);
@@ -21,7 +21,7 @@ return (0);
 r = read(file, buf, helper);
 if (helper < (int)letters)
 letters -= helper;
-while (letters != helper)
+while (letters != (int)helper)
 {
 buf[helper + 1] = '\0';
 printf("%s", buf);
