@@ -5,6 +5,8 @@
 #include <stdlib.h>
 #include <fcntl.h>
 #include <stdio.h>
+#include <limits.h>
+
 ssize_t read_textfile(const char *filename, size_t letters);
 
 #endif
