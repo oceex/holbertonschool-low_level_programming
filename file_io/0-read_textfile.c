@@ -18,6 +18,7 @@ return (0);
 file = open(filename,O_RDONLY);
 if (file == -1)
 return (0);
+helper = (int)letters < helper ? (int)letters : helper;
 r = read(file, buf, helper);
 while ((int)letters > helper)
 {
