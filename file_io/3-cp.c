@@ -40,7 +40,6 @@ int main(int argc, char *argv[])
 {
 int f1, f2, c1, c2, i;
 ssize_t w = 0, r = 0;
-char buf[1024];
 if (argc != 3)
 {
 dprintf(2, "Usage: cp file_from file_to\n");
