@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <limits.h>
 #include <string.h>
-void heling(int f1, int f2, char buf[], ssize_t r, ssize_t w);
+void helping(int f1, int f2, char buf[], ssize_t r, ssize_t w);
 /**
  * main - Copies the content of a file to another file
  * @argc: Number of arguments passed to the program
@@ -75,7 +75,7 @@ return (100);
 }
 return (0);
 }
-void heling(int f1, int f2, char buf[], ssize_t r, ssize_t w)
+void helping(int f1, int f2, char buf[], ssize_t r, ssize_t w)
 {
 r = read(f1, buf, 1024);
 if (r == -1)
