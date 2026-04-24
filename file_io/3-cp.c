@@ -55,7 +55,7 @@ return (98);
 f2 = open(argv[2], O_WRONLY | O_TRUNC, 0664);
 if (f2 == -1)
 {
-dprintf(2, "Error: Can't write to %s\n", argv[2]);
+dprintf(2, "Error0: Can't write to %s\n", argv[2]);
 return (99);
 }
 r = read(f1, buf, 1024);
@@ -69,7 +69,7 @@ while (r > 0)
 w = write(f2, buf, sizeof(buf));
 if (w == -1)
 {
-dprintf(2, "Error: Can't write to %s\n", argv[2]);
+dprintf(2, "Error1: Can't write to %s\n", argv[2]);
 return (99);
 }
 r = read(f1, buf, 1024);
@@ -82,7 +82,7 @@ return (98);
 w = write(f2, buf, sizeof(buf));
 if (w == -1)
 {
-dprintf(2, "Error: Can't write to %s\n", argv[2]);
+dprintf(2, "Error2: Can't write to %s\n", argv[2]);
 return (99);
 }
 c1 = close(f1);
