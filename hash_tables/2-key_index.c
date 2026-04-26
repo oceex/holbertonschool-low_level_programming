@@ -14,7 +14,7 @@
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
 hash_table_t *hash_table;
-size_t len = strlen((const char)key), i = 0;
+size_t len = strlen((const char *)key), i = 0;
 unsigned long int hash = 0;
 hash_table = malloc(sizeof(hash_table_t));
 if (hash_table == NULL)
