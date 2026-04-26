@@ -22,6 +22,10 @@ unsigned long int index;
 hash_node_t k;
 if (key == NULL)
 return (0);
+
+if (ht == NULL)
+return (0);
+
 if (value == NULL)
 val = NULL;
 else
