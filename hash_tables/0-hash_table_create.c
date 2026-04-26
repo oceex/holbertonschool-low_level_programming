@@ -20,7 +20,7 @@ hash_node_t **h_n;
 if (size == 0)
 return (NULL);
 
-newly_hassh = malloc(sizeof(hash_table_t));
+newly_hash = malloc(sizeof(hash_table_t));
 if (newly_hash == NULL)
 return (NULL);
 
