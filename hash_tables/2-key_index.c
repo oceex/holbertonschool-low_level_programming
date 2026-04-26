@@ -13,10 +13,9 @@
  */
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
-hash_table_t *hash_table;
 size_t len = strlen((const char *)key), i = 0;
 unsigned long int hash = 0;
-hash_table = hash_table_create(size);
+
 for (; i < len; i++)
 hash += key[i];
 hash += hash_djb2(key);
