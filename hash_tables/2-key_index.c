@@ -13,11 +13,8 @@
  */
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
-size_t len = strlen((const char *)key), i = 0;
 unsigned long int hash = 0;
 
-for (; i < len; i++)
-hash += key[i];
 hash += hash_djb2(key);
 hash %= size;
 
