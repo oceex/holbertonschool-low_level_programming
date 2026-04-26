@@ -31,19 +31,21 @@ val = NULL;
 else
 {
 val = strdup(value);
-if (val == NULL);
+if (val == NULL)
 return (0);
 }
-index = key_index(key, ht->size);
+index = key_index((const unsigned char *)key, ht->size);
 if (ht->array[index] != NULL)
 {
-k = add_node(ht->array[index], key, val)
+k = add_node(ht->array[index], key, val);
 if (k == NULL)
 return (0);
 }
 else
-ht->array[index] = val;
-
+{
+ht->array[index].value = val;
+ht->array[index].key = key;
+}
 return (1);
 }
 
@@ -84,7 +86,7 @@ return (NULL);
 }
 add->key = newK;
 add->value = newV;
-head->next = add;
+(*head)->next = add;
 
 return (add);
 }
