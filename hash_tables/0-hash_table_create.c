@@ -24,16 +24,17 @@ newly_hash = malloc(sizeof(hash_table_t));
 if (newly_hash == NULL)
 return (NULL);
 
+newly_hash->size = size;
+
 newly_hash->array = malloc(sizeof(hash_node_t) * size);
 if (newly_hash->array == NULL)
 {
 free(newly_hash);
 return (NULL);
 }
+
 for (; i < size; i++)
 newly_hash->array[i] = NULL;
-
-newly_hash->size = size;
 
 return (newly_hash);
 }
