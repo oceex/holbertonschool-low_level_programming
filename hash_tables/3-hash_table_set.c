@@ -65,7 +65,7 @@ return (1);
  * A pointer to the newly created node on success.
  * NULL if memory allocation fails or if head/key/value is invalid.
  */
-hash_node_t *add_node(hash_node_t **head, const char *key, const char *value)
+hash_node_t *add_node(hash_node_t *head, const char *key, const char *value)
 {
 hash_node_t *add;
 char *newK;
@@ -86,7 +86,7 @@ return (NULL);
 }
 add->key = newK;
 add->value = newV;
-(*head)->next = add;
+head->next = add;
 
 return (add);
 }
