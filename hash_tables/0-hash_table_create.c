@@ -35,7 +35,7 @@ h_n->key = NULL;
 h_n->value = NULL;
 
 newly_hash->size = size;
-newly_hash->array = h_n;
+newly_hash->(*array) = h_n;
 
 return (newly_hash);
 }
