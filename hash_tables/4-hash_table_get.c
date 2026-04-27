@@ -17,14 +17,14 @@
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-hash_node_t k;
+struct hash_node_s k;
 unsigned long int i = 0;
 if (ht == NULL)
 return (NULL);
 
 for (; i < ht->size; i++)
 {
-k = malloc(sizeof(hash_node_t));
+k = malloc(sizeof(struct hash_node_s));
 k = ht->array[i];
 if (strcmp(k->key, key) == 0)
 return (k->value);
