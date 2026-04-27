@@ -38,5 +38,5 @@ tmp = tmp->next;
 }
 free(tmp);
 }
-printf("}");
+printf("}\n");
 }
