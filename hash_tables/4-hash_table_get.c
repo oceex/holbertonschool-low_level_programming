@@ -24,7 +24,7 @@ return (NULL);
 k = malloc(sizeof(hash_node_t));
 for (; i < ht->size; i++)
 {
-k = k->array[i];
+k = ht->array[i];
 if (strcmp(k->key, key) == 0)
 return (k->value);
 
