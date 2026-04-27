@@ -35,7 +35,7 @@ while (copy)
 {
 
 if (strcmp(copy->key, key) == 0)
-return (copy->value));
+return (copy->value);
 
 copy = copy->next;
 }
