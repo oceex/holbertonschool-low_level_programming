@@ -49,8 +49,7 @@ return (0);
 k = malloc(sizeof(hash_node_t));
 if (k == NULL)
 {
-free(ke);
-free(val);
+free_two(ke, val);
 return (0);
 }
 k->key = ke;
@@ -58,4 +57,20 @@ k->value = val;
 k->next = ht->array[index];
 ht->array[index] = k;
 return (1);
+}
+
+/**
+ * free_two - Frees two allocated memory blocks
+ * @p1: First pointer to free
+ * @p2: Second pointer to free
+ *
+ * Description: Calls free() on both pointers. Each pointer may be NULL;
+ * in that case, free() is safely ignored for that argument.
+ *
+ * Return: Nothing.
+ */
+void free_two(void *p1, void *p2)
+{
+free(p1);
+free(p2);
 }
