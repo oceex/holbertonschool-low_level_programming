@@ -37,13 +37,15 @@ return (0);
 ke = strdup(key);
 if (ke == NULL)
 return (0);
-}
+
 index = key_index((const unsigned char *)key, ht->size);
 if (ht->array[index] != NULL)
 {
-k = add_node(ht->array[index], key, val);
+k = add_node(&ht->array[index], key, val);
+
 if (k == NULL)
 return (0);
+
 free(k);
 }
 else
