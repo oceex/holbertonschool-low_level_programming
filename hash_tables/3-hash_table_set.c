@@ -42,7 +42,7 @@ return (0);
 
 if (j != NULL)
 {
-k = add_node(j, key, val);
+k = add_node(&j, key, val);
 if (k == NULL)
 return (0);
 }
@@ -71,7 +71,7 @@ return (1);
  * A pointer to the newly created node on success.
  * NULL if memory allocation fails or if head/key/value is invalid.
  */
-hash_node_t *add_node(hash_node_t *head, const char *key, const char *value)
+hash_node_t *add_node(hash_node_t **head, const char *key, const char *value)
 {
 hash_node_t *add;
 char *newK;
@@ -83,8 +83,10 @@ return (NULL);
 
 newV = strdup(value);
 if (newV == NULL)
+{
+free(newK);
 return (NULL);
-
+}
 add = malloc(sizeof(hash_node_t));
 if (add == NULL)
 {
@@ -95,7 +97,7 @@ return (NULL);
 
 add->key = newK;
 add->value = newV;
-head->next = add;
-
+add->next = *head;
+*head = add;
 return (add);
 }
