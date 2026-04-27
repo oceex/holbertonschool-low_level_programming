@@ -35,7 +35,7 @@ ke = strdup(key);
 if (ke == NULL)
 return (0);
 
-index = key_index((const unsigned char *)ke, ht->size);
+index = key_index(ke, ht->size);
 
 if (ht->array[index]->key != NULL)
 {
