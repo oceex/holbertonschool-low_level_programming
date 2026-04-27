@@ -31,7 +31,7 @@ while (tmp)
 if (v)
 printf(", ");
 
-printf("%s: %s", tmp->key, tmp->value);
+printf("'%s': '%s'", tmp->key, tmp->value);
 
 v = 1;
 tmp = tmp->next;
