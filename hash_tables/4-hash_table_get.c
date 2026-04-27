@@ -24,6 +24,8 @@ return (NULL);
 
 for (; i < ht->size; i++)
 {
+if (ht->array[i] == NULL)
+continue;
 k = malloc(sizeof(hash_table_t));
 k = ht->array[i];
 if (strcmp(k->key, key) == 0)
