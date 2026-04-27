@@ -19,39 +19,37 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 char *val, *ke;
 unsigned long int index;
-hash_node_t *k;
-
-if (key == NULL)
-return (0);
-
-if (ht == NULL)
+hash_node_t *k, *j;
+if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 return (0);
 
 val = strdup(value);
 if (val == NULL)
 return (0);
 
+index = key_index((char const unsigned *)key, ht->size);
+
+if (strcmp(ht->array[index]->key, key) == 0)
+{
+ht->array[index]->value = val;
+return (1);
+}
+j = ht->array[index];
+
 ke = strdup(key);
 if (ke == NULL)
 return (0);
 
-index = key_index((char const unsigned *)ke, ht->size);
-
-if (ht->array[index]->key != NULL)
+if (j != NULL)
 {
-k = add_node(ht->array[index], key, val);
-
+k = add_node(j, key, val);
 if (k == NULL)
 return (0);
-
-free(k);
 }
-else if (ht->array[index]->key == key)
-ht->array[index]->value = val;
 else
 {
-ht->array[index]->value = val;
-ht->array[index]->key = ke;
+j->value = val;
+j->key = ke;
 }
 
 return (1);
