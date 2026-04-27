@@ -19,7 +19,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 char *val, *ke;
 unsigned long int index;
-hash_node_t *k;
+hash_node_t *k = NULL;
 if (key == NULL)
 return (0);
 
@@ -44,6 +44,7 @@ if (ht->array[index] != NULL)
 k = add_node(ht->array[index], key, val);
 if (k == NULL)
 return (0);
+free(k);
 }
 else
 {
