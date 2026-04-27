@@ -19,38 +19,41 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 char *val, *ke;
 unsigned long int index;
-hash_node_t *k = NULL;
+hash_node_t *k;
+
 if (key == NULL)
 return (0);
 
 if (ht == NULL)
 return (0);
 
-if (value == NULL)
-val = NULL;
-else
-{
 val = strdup(value);
 if (val == NULL)
 return (0);
-}
+
 ke = strdup(key);
 if (ke == NULL)
 return (0);
 
-index = key_index((const unsigned char *)key, ht->size);
-if (ht->array[index] != NULL)
+index = key_index((const unsigned char *)ke, ht->size);
+
+if (ht->array[index]->key != NULL)
 {
 k = add_node(ht->array[index], key, val);
+
 if (k == NULL)
 return (0);
+
 free(k);
 }
+else if (ht->array[index]->key == key)
+ht->array[index]->value = val;
 else
 {
 ht->array[index]->value = val;
 ht->array[index]->key = ke;
 }
+
 return (1);
 }
 
@@ -75,6 +78,7 @@ hash_node_t *add_node(hash_node_t *head, const char *key, const char *value)
 hash_node_t *add;
 char *newK;
 char *newV;
+
 newK = strdup(key);
 if (newK == NULL)
 return (NULL);
@@ -82,6 +86,7 @@ return (NULL);
 newV = strdup(value);
 if (newV == NULL)
 return (NULL);
+
 add = malloc(sizeof(hash_node_t));
 if (add == NULL)
 {
@@ -89,6 +94,7 @@ free(newV);
 free(newK);
 return (NULL);
 }
+
 add->key = newK;
 add->value = newV;
 head->next = add;
