@@ -17,30 +17,26 @@
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-hash_node_t *copy;
+hash_node_t k;
 unsigned long int i = 0;
 if (ht == NULL)
 return (NULL);
+k = malloc(sizeof(hash_node_t));
 for (; i < ht->size; i++)
 {
-copy = malloc(sizeof(hash_node_t));
-if (copy == NULL)
-return (NULL);
+k = k->array[i];
+if (strcmp(k->key, key) == 0)
+return (k->value);
 
-copy = ht->array[i];
-if (strcmp(copy->key, key) == 0)
-return (copy->value);
-
-while (copy)
+while (k)
 {
+if (strcmp(k->key, key) == 0)
+return (k->value);
 
-if (strcmp(copy->key, key) == 0)
-return (copy->value);
-
-copy = copy->next;
+k = k->next;
 }
 
-free(copy);
+free(k);
 }
 
 return (NULL);
