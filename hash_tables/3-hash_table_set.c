@@ -17,7 +17,7 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-char *val;
+char *val, *ke;
 unsigned long int index;
 hash_node_t *k;
 if (key == NULL)
@@ -34,17 +34,21 @@ val = strdup(value);
 if (val == NULL)
 return (0);
 }
-index = key_index((const unsigned char *)key, ht->size);
+ke = strdup(key);
+if (ke == NULL)
+return (0);
+}
+index = key_index((const unsigned char *)ke, ht->size);
 if (ht->array[index] != NULL)
 {
-k = add_node(ht->array[index], key, val);
+k = add_node(ht->array[index], ke, val);
 if (k == NULL)
 return (0);
 }
 else
 {
 ht->array[index]->value = val;
-ht->array[index]->key = key;
+ht->array[index]->key = ke;
 }
 return (1);
 }
