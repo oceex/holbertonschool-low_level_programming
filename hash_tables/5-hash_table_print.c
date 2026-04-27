@@ -35,6 +35,7 @@ printf("%s: %s", tmp->key, tmp->value);
 
 v = 1;
 }
+free(tmp);
 }
-
+printf("}");
 }
