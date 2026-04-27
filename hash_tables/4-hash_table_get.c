@@ -21,9 +21,10 @@ hash_node_t k;
 unsigned long int i = 0;
 if (ht == NULL)
 return (NULL);
-k = malloc(sizeof(hash_node_t));
+
 for (; i < ht->size; i++)
 {
+k = malloc(sizeof(hash_node_t));
 k = ht->array[i];
 if (strcmp(k->key, key) == 0)
 return (k->value);
@@ -32,7 +33,6 @@ while (k)
 {
 if (strcmp(k->key, key) == 0)
 return (k->value);
-
 k = k->next;
 }
 
